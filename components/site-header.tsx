@@ -38,7 +38,7 @@ export default function SiteHeader() {
       <div className="container-rail flex h-[88px] items-center justify-between gap-6">
         <Link
           href="/"
-          className="logo-shell group inline-flex items-center gap-3 transition-transform duration-300 hover:scale-[1.01]"
+          className="group inline-flex items-center gap-3 transition-transform duration-300 hover:scale-[1.01]"
         >
           <Image
             src="/images/logo.webp"

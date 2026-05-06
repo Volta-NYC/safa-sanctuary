@@ -96,7 +96,7 @@ body::before {
 
 .hero-background {
   position: relative;
-  min-height: 620px;
+  min-height: calc(100vh - 7rem);
   background-image:
     linear-gradient(
       110deg,
@@ -389,27 +389,19 @@ body::before {
 }
 
 .site-header {
-  border-bottom: 1px solid rgba(163, 184, 153, 0.45);
-  background: rgba(43, 65, 48, 0.88);
+  border-bottom: 1px solid rgba(248, 211, 197, 0.42);
+  background: rgba(102, 123, 104, 0.93);
   backdrop-filter: blur(12px);
 }
 
 .site-header--scrolled {
-  border-bottom-color: rgba(248, 211, 197, 0.4);
-  background: rgba(43, 65, 48, 0.96);
+  border-bottom-color: rgba(252, 238, 233, 0.58);
+  background: rgba(102, 123, 104, 0.98);
   box-shadow: 0 12px 24px rgba(43, 65, 48, 0.28);
 }
 
 .logo-pop {
-  filter: saturate(1.1) contrast(1.05) drop-shadow(0 8px 14px rgba(248, 211, 197, 0.22));
-}
-
-.logo-shell {
-  border-radius: 0.95rem;
-  background: rgba(252, 238, 233, 0.96);
-  border: 1px solid rgba(163, 184, 153, 0.65);
-  box-shadow: 0 10px 20px rgba(43, 65, 48, 0.2);
-  padding: 0.1rem 0.45rem;
+  filter: saturate(1.14) contrast(1.08) drop-shadow(0 8px 14px rgba(43, 65, 48, 0.34));
 }
 
 .nav-link {
@@ -633,7 +625,7 @@ body::before {
   }
 
   .hero-background {
-    min-height: 500px;
+    min-height: calc(100svh - 7rem);
     background-position: center;
   }
 }
