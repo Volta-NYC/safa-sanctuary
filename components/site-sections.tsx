@@ -1,5 +1,6 @@
 import Image from "next/image";
 import ContactForm from "@/components/contact-form";
+import TypewriterText from "@/components/typewriter-text";
 import {
   ABOUT_OVERVIEW,
   ABOUT_MISSION,
@@ -21,8 +22,12 @@ function HeroSection() {
       <div className="hero-shell hero-background section-glow">
         <div className="container-rail hero-overlay-content space-y-5 px-8 pb-10 pt-32 sm:px-12 sm:pb-12 sm:pt-36">
           <p className="eyebrow reveal-up">Nonprofit Support Network</p>
-          <h1 className="hero-brand reveal-up delay-1">Safa Sanctuary</h1>
-          <h2 className="hero-title reveal-up delay-2">{HERO_TITLE}</h2>
+          <h1 className="hero-brand hero-headline">
+            <span>Safa Sanctuary</span>
+          </h1>
+          <h2 className="hero-title hero-title--typed reveal-up delay-2">
+            <TypewriterText text={HERO_TITLE} />
+          </h2>
           <p className="hero-copy reveal-up delay-3">{HERO_COPY}</p>
           <div className="reveal-up delay-4 flex flex-wrap gap-3">
             <a href="/services" className="cta-chip">
@@ -38,6 +43,18 @@ function HeroSection() {
             </a>
           </div>
         </div>
+      </div>
+      <div className="hero-wave" aria-hidden="true">
+        <svg viewBox="0 0 1440 188" preserveAspectRatio="none">
+          <path
+            d="M0,73L60,83.7C120,95,240,117,360,111.3C480,105,600,73,720,73C840,73,960,105,1080,115.7C1200,127,1320,117,1380,111.3L1440,105L1440,188L1380,188C1320,188,1200,188,1080,188C960,188,840,188,720,188C600,188,480,188,360,188C240,188,120,188,60,188L0,188Z"
+            fill="rgba(248, 211, 197, 0.85)"
+          />
+          <path
+            d="M0,108L48,113.3C96,119,192,129,288,129.3C384,129,480,119,576,108C672,97,768,85,864,90.7C960,97,1056,119,1152,129.3C1248,140,1344,140,1392,140L1440,140L1440,188L1392,188C1344,188,1248,188,1152,188C1056,188,960,188,864,188C768,188,672,188,576,188C480,188,384,188,288,188C192,188,96,188,48,188L0,188Z"
+            fill="var(--rose-100)"
+          />
+        </svg>
       </div>
     </section>
   );
@@ -223,7 +240,7 @@ function ServicesCards({ headingTag = "h2" }: { headingTag?: "h1" | "h2" }) {
     <section id="services-section" className="container-rail mt-12">
       <div className="section-pane space-y-8 p-6 sm:p-8">
         <HeadingTag className="section-title reveal-up">Services</HeadingTag>
-        <div className="grid gap-5 md:grid-cols-2">
+        <div className="services-scroller">
           {SERVICES.map((service, index) => (
             <article
               key={service.title}
