@@ -38,16 +38,18 @@ export default function SiteHeader() {
       <div className="container-rail flex h-[88px] items-center justify-between gap-6">
         <Link
           href="/"
-          className="group inline-flex items-center gap-3 transition-transform duration-300 hover:scale-[1.01]"
+          className="group inline-flex items-center transition-transform duration-300 hover:scale-[1.01]"
         >
-          <Image
-            src="/images/logo.webp"
-            alt="Safa Sanctuary"
-            width={280}
-            height={112}
-            className="logo-pop -my-7 h-28 w-auto md:-my-9 md:h-32"
-            priority
-          />
+          <span className="relative block h-[76px] w-[186px] overflow-hidden sm:h-[82px] sm:w-[222px] md:w-[252px]">
+            <Image
+              src="/images/logo.webp"
+              alt="Safa Sanctuary"
+              fill
+              priority
+              sizes="(max-width: 640px) 186px, (max-width: 768px) 222px, 252px"
+              className="logo-pop object-cover object-[center_34%]"
+            />
+          </span>
           <span className="sr-only">Safa Sanctuary</span>
         </Link>
 

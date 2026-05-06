@@ -19,7 +19,7 @@ function HeroSection() {
   return (
     <section className="hero-main">
       <div className="hero-shell hero-background section-glow">
-        <div className="container-rail hero-overlay-content space-y-5 p-8 sm:p-12">
+        <div className="container-rail hero-overlay-content space-y-5 px-8 pb-10 pt-32 sm:px-12 sm:pb-12 sm:pt-36">
           <p className="eyebrow reveal-up">Nonprofit Support Network</p>
           <h1 className="hero-brand reveal-up delay-1">Safa Sanctuary</h1>
           <h2 className="hero-title reveal-up delay-2">{HERO_TITLE}</h2>
