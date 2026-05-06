@@ -1,0 +1,11 @@
+<svg width="1200" height="900" viewBox="0 0 1200 900" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <rect width="1200" height="900" fill="#FCEEE9"/>
+  <rect x="58" y="58" width="1084" height="784" rx="42" fill="#DDE6D5"/>
+  <circle cx="208" cy="214" r="124" fill="#F8D3C5"/>
+  <circle cx="1002" cy="736" r="106" fill="#A3B899"/>
+  <rect x="188" y="214" width="824" height="74" rx="20" fill="#95774E"/>
+  <rect x="188" y="330" width="664" height="54" rx="16" fill="#667B68"/>
+  <rect x="188" y="412" width="542" height="54" rx="16" fill="#838264"/>
+  <path d="M220 590C328 498 455 452 600 452C745 452 872 498 980 590" stroke="#2B4130" stroke-width="24" stroke-linecap="round"/>
+  <text x="600" y="726" text-anchor="middle" fill="#2B4130" font-family="Poppins, Arial, sans-serif" font-size="62" font-weight="700">Safa Sanctuary</text>
+</svg>

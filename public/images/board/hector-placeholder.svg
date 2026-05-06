@@ -1,0 +1,7 @@
+<svg width="1200" height="1200" viewBox="0 0 1200 1200" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <rect width="1200" height="1200" fill="#FCEEE9"/>
+  <rect x="72" y="72" width="1056" height="1056" rx="48" fill="#DDE6D5"/>
+  <circle cx="600" cy="430" r="210" fill="#A3B899"/>
+  <path d="M248 964C248 768.669 406.336 610.333 601.667 610.333C797.001 610.333 955.333 768.669 955.333 964V1000H248V964Z" fill="#667B68"/>
+  <text x="600" y="1035" text-anchor="middle" fill="#2B4130" font-family="Poppins, Arial, sans-serif" font-size="58" font-weight="700">Hector Photo Placeholder</text>
+</svg>

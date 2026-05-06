@@ -1,0 +1,11 @@
+<svg width="1200" height="780" viewBox="0 0 1200 780" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <rect width="1200" height="780" fill="#A3B899"/>
+  <rect x="48" y="48" width="1104" height="684" rx="38" fill="#FCEEE9"/>
+  <rect x="120" y="138" width="960" height="494" rx="30" fill="#DDE6D5"/>
+  <rect x="182" y="206" width="836" height="66" rx="20" fill="#2B4130"/>
+  <rect x="182" y="310" width="516" height="48" rx="14" fill="#667B68"/>
+  <rect x="182" y="386" width="626" height="48" rx="14" fill="#838264"/>
+  <circle cx="930" cy="460" r="104" fill="#F8D3C5"/>
+  <path d="M220 512H880" stroke="#95774E" stroke-width="18" stroke-linecap="round"/>
+  <text x="600" y="644" text-anchor="middle" fill="#2B4130" font-family="Poppins, Arial, sans-serif" font-size="58" font-weight="700">Service Placeholder 04</text>
+</svg>
