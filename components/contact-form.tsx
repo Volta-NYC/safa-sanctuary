@@ -56,12 +56,7 @@ export default function ContactForm({
             SMS Consent (Optional)
           </legend>
           <label className="radio-row">
-            <input
-              type="radio"
-              name="smsConsent"
-              value="yes"
-              className="mt-1"
-            />
+            <input type="radio" name="smsConsent" value="yes" />
             <span>
               I consent to receive conversational and informational SMS from
               Safa Sanctuary Inc related to my inquiry or services. Reply STOP
@@ -70,7 +65,7 @@ export default function ContactForm({
             </span>
           </label>
           <label className="radio-row">
-            <input type="radio" name="smsConsent" value="no" className="mt-1" />
+            <input type="radio" name="smsConsent" value="no" />
             <span>I do not consent to receive SMS messages.</span>
           </label>
         </fieldset>

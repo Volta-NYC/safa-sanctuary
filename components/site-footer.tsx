@@ -21,9 +21,9 @@ export default function SiteFooter() {
             <Image
               src="/images/logo.webp"
               alt="Safa Sanctuary logo"
-              width={212}
-              height={85}
-              className="h-20 w-auto"
+              width={246}
+              height={99}
+              className="h-24 w-auto"
             />
             <h3 className="text-xl font-semibold tracking-tight text-white">
               {SITE_TITLE}
