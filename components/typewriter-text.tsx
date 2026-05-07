@@ -5,6 +5,7 @@ import { useEffect, useState } from "react";
 type TypewriterTextProps = {
   text: string;
   className?: string;
+  highlightWord?: string;
   typingSpeedMs?: number;
   startDelayMs?: number;
 };
@@ -12,6 +13,7 @@ type TypewriterTextProps = {
 export default function TypewriterText({
   text,
   className,
+  highlightWord,
   typingSpeedMs = 42,
   startDelayMs = 560,
 }: TypewriterTextProps) {
@@ -41,10 +43,23 @@ export default function TypewriterText({
 
   const typed = text.slice(0, visibleChars);
   const isFinished = visibleChars >= text.length;
+  const highlightStart = highlightWord ? typed.indexOf(highlightWord) : -1;
+  const highlightedText =
+    highlightStart >= 0 && highlightWord ? (
+      <>
+        {typed.slice(0, highlightStart)}
+        <span className="highlight">
+          {typed.slice(highlightStart, highlightStart + highlightWord.length)}
+        </span>
+        {typed.slice(highlightStart + highlightWord.length)}
+      </>
+    ) : (
+      typed
+    );
 
   return (
     <span className={className}>
-      <span>{typed}</span>
+      <span>{highlightedText}</span>
       <span
         aria-hidden="true"
         className={`typewriter-cursor ${isFinished ? "typewriter-cursor--done" : ""}`}

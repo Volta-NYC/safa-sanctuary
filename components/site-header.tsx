@@ -19,7 +19,7 @@ export default function SiteHeader() {
   const [isScrolled, setIsScrolled] = useState(false);
 
   useEffect(() => {
-    const onScroll = () => setIsScrolled(window.scrollY > 14);
+    const onScroll = () => setIsScrolled(window.scrollY > 20);
     onScroll();
     window.addEventListener("scroll", onScroll, { passive: true });
     return () => window.removeEventListener("scroll", onScroll);
@@ -27,8 +27,8 @@ export default function SiteHeader() {
 
   const headerClassName = useMemo(
     () =>
-      `site-header fixed inset-x-0 top-0 z-50 transition-all duration-300 ${
-        isScrolled ? "site-header--scrolled" : ""
+      `site-nav ${
+        isScrolled ? "scrolled" : ""
       }`,
     [isScrolled],
   );
@@ -40,13 +40,13 @@ export default function SiteHeader() {
           href="/"
           className="group inline-flex items-center transition-transform duration-300 hover:scale-[1.01]"
         >
-          <span className="relative block h-[76px] w-[198px] overflow-hidden sm:h-[80px] sm:w-[228px] md:w-[246px]">
+          <span className="relative block h-[58px] w-[156px] overflow-hidden sm:w-[178px]">
             <Image
               src="/images/logo.webp"
               alt="Safa Sanctuary"
               fill
               priority
-              sizes="(max-width: 640px) 198px, (max-width: 768px) 228px, 246px"
+              sizes="(max-width: 640px) 156px, 178px"
               className="logo-pop object-cover object-[center_38%]"
             />
           </span>
@@ -60,16 +60,14 @@ export default function SiteHeader() {
               <Link
                 key={item.href}
                 href={item.href}
-                className={`nav-link text-[0.95rem] font-medium tracking-wide ${
-                  active ? "text-white" : "text-white/92"
-                }`}
+                className="nav-link"
                 aria-current={active ? "page" : undefined}
               >
                 {item.label}
               </Link>
             );
           })}
-          <a href="#contact" className="cta-chip">
+          <a href="#contact" className="btn-primary">
             Get In Touch
           </a>
         </nav>
@@ -116,8 +114,8 @@ export default function SiteHeader() {
                 onClick={() => setMenuOpen(false)}
                 className={`rounded-lg px-3 py-3 text-base font-medium transition-colors ${
                   active
-                    ? "bg-[--sage-600] text-white"
-                    : "text-white/90 hover:bg-[--sage-600] hover:text-white"
+                    ? "bg-[--color-sage-light] text-[--color-sage-dark]"
+                    : "text-[--color-cream] hover:bg-[--color-sage-light] hover:text-[--color-sage-dark]"
                 }`}
                 aria-current={active ? "page" : undefined}
               >
@@ -128,7 +126,7 @@ export default function SiteHeader() {
           <a
             href="#contact"
             onClick={() => setMenuOpen(false)}
-            className="mt-3 cta-chip w-full justify-center"
+            className="btn-primary mt-3 w-full justify-center"
           >
             Get In Touch
           </a>

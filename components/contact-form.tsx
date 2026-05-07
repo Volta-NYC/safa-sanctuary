@@ -21,31 +21,31 @@ export default function ContactForm({
   return (
     <form
       onSubmit={handleSubmit}
-      className="section-pane space-y-6 bg-[--paper] p-6 sm:p-8"
+      className="contact-form contact-section reveal"
     >
       <div className="grid gap-5 md:grid-cols-2">
-        <label className="form-field">
+        <label className="field-group">
           <span>Name</span>
           <input type="text" name="name" required autoComplete="name" />
         </label>
-        <label className="form-field">
+        <label className="field-group">
           <span>Phone</span>
           <input type="tel" name="phone" required autoComplete="tel" />
         </label>
       </div>
 
       <div className="grid gap-5 md:grid-cols-2">
-        <label className="form-field">
+        <label className="field-group">
           <span>Email</span>
           <input type="email" name="email" required autoComplete="email" />
         </label>
-        <label className="form-field">
+        <label className="field-group">
           <span>Subject</span>
           <input type="text" name="subject" required />
         </label>
       </div>
 
-      <label className="form-field">
+      <label className="field-group">
         <span>Message</span>
         <textarea name="message" rows={5} required />
       </label>
@@ -78,7 +78,7 @@ export default function ContactForm({
 
       <div className="flex flex-col gap-4 sm:flex-row sm:items-center sm:justify-between">
         <p
-          className={`text-sm transition-colors ${
+          className={`confidential-note transition-colors ${
             submitted ? "text-[--accent-strong]" : "text-[--ink-soft]"
           }`}
           role="status"
@@ -87,7 +87,7 @@ export default function ContactForm({
             ? "Thank you for submitting your inquiry. We look forward to connecting soon."
             : "All information is treated confidentially."}
         </p>
-        <button type="submit" className="cta-chip w-full justify-center sm:w-auto">
+        <button type="submit" className="btn-primary w-full justify-center sm:w-auto">
           Submit
         </button>
       </div>

@@ -1,20 +1,8 @@
 import type { Metadata } from "next";
-import { Esteban, Poppins } from "next/font/google";
+import GlobalEffects from "@/components/global-effects";
 import SiteFooter from "@/components/site-footer";
 import SiteHeader from "@/components/site-header";
 import "./globals.css";
-
-const esteban = Esteban({
-  weight: "400",
-  variable: "--font-display",
-  subsets: ["latin"],
-});
-
-const poppins = Poppins({
-  variable: "--font-body",
-  weight: ["400", "500", "600", "700"],
-  subsets: ["latin"],
-});
 
 export const metadata: Metadata = {
   title: {
@@ -31,16 +19,23 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html
-      lang="en"
-      className={`${poppins.variable} ${esteban.variable} h-full antialiased`}
-    >
+    <html lang="en" className="h-full antialiased">
+      <head>
+        <link rel="preconnect" href="https://fonts.googleapis.com" />
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin="anonymous" />
+        {/* eslint-disable-next-line @next/next/no-page-custom-font */}
+        <link
+          href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,300;0,9..144,400;1,9..144,300;1,9..144,500&family=DM+Sans:opsz,wght@9..40,400;9..40,500&display=swap"
+          rel="stylesheet"
+        />
+      </head>
       <body className="min-h-full">
         <div className="page-shell flex min-h-full flex-col">
           <SiteHeader />
-          <main className="flex-1 pb-16 pt-28">{children}</main>
+          <main className="flex-1">{children}</main>
           <SiteFooter />
         </div>
+        <GlobalEffects />
       </body>
     </html>
   );

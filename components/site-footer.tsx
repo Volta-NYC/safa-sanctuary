@@ -14,10 +14,10 @@ export default function SiteFooter() {
   const year = new Date().getFullYear();
 
   return (
-    <footer id="contact" className="site-footer mt-20 border-t">
-      <div className="container-rail py-14">
-        <div className="grid gap-10 md:grid-cols-2 lg:grid-cols-4">
-          <div className="space-y-4">
+    <footer id="contact" className="site-footer">
+      <div className="container-rail">
+        <div className="footer-grid">
+          <div className="space-y-4 reveal">
             <Image
               src="/images/logo.webp"
               alt="Safa Sanctuary logo"
@@ -34,7 +34,7 @@ export default function SiteFooter() {
             </p>
           </div>
 
-          <div className="space-y-4">
+          <div className="space-y-4 reveal reveal-delay-1">
             <h4 className="text-sm font-semibold uppercase tracking-[0.18em] text-white">
               Quick Links
             </h4>
@@ -54,7 +54,7 @@ export default function SiteFooter() {
             </ul>
           </div>
 
-          <div className="space-y-4">
+          <div className="space-y-4 reveal reveal-delay-2">
             <h4 className="text-sm font-semibold uppercase tracking-[0.18em] text-white">
               Contact Us
             </h4>
@@ -72,7 +72,7 @@ export default function SiteFooter() {
             </ul>
           </div>
 
-          <div className="space-y-4">
+          <div className="space-y-4 reveal reveal-delay-3">
             <h4 className="text-sm font-semibold uppercase tracking-[0.18em] text-white">
               Follow Us
             </h4>
@@ -91,7 +91,8 @@ export default function SiteFooter() {
           </div>
         </div>
 
-        <div className="mt-12 flex flex-col gap-3 border-t border-[--footer-line] pt-6 text-xs text-white/85 sm:flex-row sm:items-center sm:justify-between">
+        <hr className="footer-divider" />
+        <div className="footer-bottom">
           <p>&copy; {year} {SITE_TITLE}. All rights reserved.</p>
           <p>Built with care for safer pathways and stronger communities.</p>
         </div>
