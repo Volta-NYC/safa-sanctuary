@@ -100,6 +100,18 @@ export default function SiteFooter() {
         <div className="footer-bottom">
           <p>&copy; {year} {SITE_TITLE}. All rights reserved.</p>
           <p>Built with care for safer pathways and stronger communities.</p>
+          <p>
+            Made by{" "}
+            <a
+              href="https://voltanyc.org"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="footer-link underline-offset-4 hover:underline"
+            >
+              Volta
+            </a>
+            .
+          </p>
         </div>
       </div>
     </footer>
