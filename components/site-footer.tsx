@@ -47,6 +47,11 @@ export default function SiteFooter() {
                 </li>
               ))}
               <li>
+                <Link href="/get-in-touch" className="footer-link">
+                  Get In Touch
+                </Link>
+              </li>
+              <li>
                 <Link href="/privacy-policy" className="footer-link">
                   Privacy Policy
                 </Link>

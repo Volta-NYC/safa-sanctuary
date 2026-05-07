@@ -271,7 +271,7 @@ section:nth-child(odd) {
   gap: 0;
   position: relative;
   overflow: hidden;
-  padding: 8rem 4rem 6rem;
+  padding: 4.25rem 4rem 6rem;
 }
 
 .hero::before {
@@ -908,6 +908,72 @@ section:nth-child(odd) {
   margin: 0 auto;
 }
 
+.contact-page-shell {
+  padding-top: 7.5rem;
+}
+
+.contact-page-grid {
+  display: grid;
+  grid-template-columns: minmax(280px, 0.9fr) minmax(360px, 1.1fr);
+  gap: 1.5rem;
+  align-items: start;
+}
+
+.contact-page-intro {
+  padding: 3rem;
+}
+
+.contact-page-intro h1 {
+  font-style: normal;
+  margin-bottom: 1rem;
+}
+
+.contact-page-intro .section-copy {
+  margin-bottom: 1.8rem;
+}
+
+.contact-page-grid .contact-section {
+  max-width: none;
+  margin: 0;
+  padding: 3rem;
+}
+
+.contact-methods {
+  display: grid;
+  gap: 0.75rem;
+}
+
+.contact-method {
+  display: flex;
+  flex-direction: column;
+  gap: 0.2rem;
+  padding: 0.95rem 1rem;
+  border: 1px solid rgba(22, 39, 25, 0.16);
+  border-radius: 12px;
+  background: rgba(255, 255, 255, 0.72);
+  text-decoration: none;
+  transition: border-color var(--transition-base), transform var(--transition-base), box-shadow var(--transition-base);
+}
+
+.contact-method:hover {
+  transform: translateY(-2px);
+  border-color: rgba(46, 66, 40, 0.34);
+  box-shadow: 0 14px 30px rgba(22, 39, 25, 0.12);
+}
+
+.contact-method-label {
+  font-size: 0.72rem;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: rgba(33, 56, 32, 0.74);
+}
+
+.contact-method-value {
+  color: var(--color-evergreen);
+  font-size: 0.96rem;
+  word-break: break-word;
+}
+
 .contact-section h2 {
   margin-bottom: 0.5rem;
 }
@@ -1273,7 +1339,7 @@ footer a:hover {
 
   .hero {
     grid-template-columns: 1fr;
-    padding: 6rem 1.5rem 4rem;
+    padding: 4.75rem 1.5rem 4rem;
     text-align: center;
   }
 
@@ -1316,6 +1382,18 @@ footer a:hover {
   }
 
   .contact-section {
+    padding: 2rem 1.25rem;
+  }
+
+  .contact-page-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .contact-page-intro {
+    padding: 2rem 1.25rem;
+  }
+
+  .contact-page-grid .contact-section {
     padding: 2rem 1.25rem;
   }
 

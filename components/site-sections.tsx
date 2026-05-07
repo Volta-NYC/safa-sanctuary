@@ -5,6 +5,8 @@ import {
   ABOUT_OVERVIEW,
   ABOUT_MISSION,
   BOARD_MEMBERS,
+  CONTACT_EMAIL,
+  CONTACT_PHONE,
   HERO_COPY,
   HERO_TITLE,
   HOME_MISSION,
@@ -308,6 +310,44 @@ function PolicySection() {
   );
 }
 
+function GetInTouchSection() {
+  return (
+    <section className="container-rail contact-page-shell">
+      <div className="contact-page-grid">
+        <div className="section-pane contact-page-intro reveal">
+          <p className="eyebrow">Get In Touch</p>
+          <h1 className="section-title">Let&apos;s Connect</h1>
+          <p className="section-copy">
+            Reach out for yourself or someone you&apos;re supporting. Our team responds
+            within 24-48 hours and handles every inquiry with care and confidentiality.
+          </p>
+
+          <div className="contact-methods">
+            <a href={`mailto:${CONTACT_EMAIL}`} className="contact-method">
+              <span className="contact-method-label">Email</span>
+              <span className="contact-method-value">{CONTACT_EMAIL}</span>
+            </a>
+            <a href={`tel:${CONTACT_PHONE}`} className="contact-method">
+              <span className="contact-method-label">Phone</span>
+              <span className="contact-method-value">{CONTACT_PHONE}</span>
+            </a>
+            <a
+              href={INSTAGRAM_URL}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="contact-method"
+            >
+              <span className="contact-method-label">Instagram</span>
+              <span className="contact-method-value">@safasanctuary</span>
+            </a>
+          </div>
+        </div>
+        <ContactForm includeSmsConsent={true} />
+      </div>
+    </section>
+  );
+}
+
 export function HomeExperience() {
   return (
     <>
@@ -342,4 +382,8 @@ export function ServicesExperience() {
 
 export function PrivacyExperience() {
   return <PolicySection />;
+}
+
+export function GetInTouchExperience() {
+  return <GetInTouchSection />;
 }

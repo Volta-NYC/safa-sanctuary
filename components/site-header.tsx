@@ -67,9 +67,9 @@ export default function SiteHeader() {
               </Link>
             );
           })}
-          <a href="#contact" className="btn-primary">
+          <Link href="/get-in-touch" className="btn-primary">
             Get In Touch
-          </a>
+          </Link>
         </nav>
 
         <button
@@ -123,13 +123,13 @@ export default function SiteHeader() {
               </Link>
             );
           })}
-          <a
-            href="#contact"
+          <Link
+            href="/get-in-touch"
             onClick={() => setMenuOpen(false)}
             className="btn-primary mt-3 w-full justify-center"
           >
             Get In Touch
-          </a>
+          </Link>
         </nav>
       </div>
     </header>
