@@ -1214,6 +1214,15 @@ footer a:hover {
   color: var(--color-saffron-light);
 }
 
+.volta-link {
+  color: #84d61a;
+  font-weight: 600;
+}
+
+.volta-link:hover {
+  color: #9ff022;
+}
+
 .footer-grid {
   display: grid;
   grid-template-columns: 2fr 1fr 1fr 1fr;

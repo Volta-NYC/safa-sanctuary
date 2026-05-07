@@ -21,9 +21,9 @@ export default function SiteFooter() {
             <Image
               src="/images/logo.webp"
               alt="Safa Sanctuary logo"
-              width={170}
-              height={68}
-              className="h-16 w-auto"
+              width={212}
+              height={85}
+              className="h-20 w-auto"
             />
             <h3 className="text-xl font-semibold tracking-tight text-white">
               {SITE_TITLE}
@@ -106,7 +106,7 @@ export default function SiteFooter() {
               href="https://voltanyc.org"
               target="_blank"
               rel="noopener noreferrer"
-              className="footer-link underline-offset-4 hover:underline"
+              className="footer-link volta-link underline-offset-4 hover:underline"
             >
               Volta
             </a>
