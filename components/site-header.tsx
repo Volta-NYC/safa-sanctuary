@@ -38,7 +38,7 @@ export default function SiteHeader() {
       <div className="container-rail flex h-[88px] items-center justify-between gap-6">
         <Link
           href="/"
-          className="group inline-flex items-center transition-transform duration-300 hover:scale-[1.01]"
+          className="group -ml-0.5 inline-flex items-center transition-transform duration-300 hover:scale-[1.01] sm:-ml-1"
         >
           <span className="relative block h-[58px] w-[156px] overflow-hidden sm:w-[178px]">
             <Image
