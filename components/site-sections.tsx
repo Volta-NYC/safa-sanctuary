@@ -27,10 +27,10 @@ function HeroSection() {
         <p className="hero-eyebrow reveal">Nonprofit Support Network</p>
         <h1 className="reveal reveal-delay-1">Safa Sanctuary</h1>
         <h2 className="hero-title hero-title--typed reveal reveal-delay-2">
-          <TypewriterText
-            text={HERO_TITLE}
-            highlightWord="Cracks"
-          />
+          <span className="hero-title-static">Keeping Women from Falling</span>
+          <span className="hero-title-dynamic">
+            <TypewriterText text={HERO_TITLE} highlightWord="Crack" />
+          </span>
         </h2>
         <p className="hero-desc reveal reveal-delay-3">{HERO_COPY}</p>
         <div className="hero-actions reveal reveal-delay-4">
@@ -43,7 +43,7 @@ function HeroSection() {
             rel="noopener noreferrer"
             className="btn-secondary"
           >
-            Follow on Instagram
+            Follow Our Instagram
           </a>
         </div>
       </div>
@@ -66,10 +66,10 @@ function InstagramSpotlightSection() {
       <div className="instagram-content">
         <div>
           <p className="eyebrow">Follow Us on Instagram</p>
-          <h2 className="section-title">
+          <h2 className="section-title instagram-title-line">
             Stay Connected With Safa Sanctuary
           </h2>
-          <p className="section-copy">
+          <p className="section-copy instagram-copy">
             We share updates, stories, and community resources regularly. Follow
             us to stay informed and connected.
           </p>
@@ -210,13 +210,11 @@ function BoardSection() {
                   width={1200}
                   height={1200}
                 />
-                <div className="board-bio-overlay">
-                  <p>{member.bio}</p>
-                </div>
               </div>
               <div className="board-info">
                 <p className="board-role">{member.role}</p>
                 <h3 className="board-name">{member.name}</h3>
+                <p className="board-bio">{member.bio}</p>
               </div>
             </article>
           ))}
@@ -238,7 +236,15 @@ function ServicesCards({ headingTag = "h2" }: { headingTag?: "h1" | "h2" }) {
               key={service.title}
               className={`service-card reveal reveal-delay-${Math.min(index + 1, 4)}`}
             >
-              <h3 className="service-title">{service.title}</h3>
+              {service.title === "Client Navigation & Accompaniment" ? (
+                <h3 className="service-title service-title-tight">
+                  Client Navigation &amp;
+                  <br />
+                  Accompaniment
+                </h3>
+              ) : (
+                <h3 className="service-title">{service.title}</h3>
+              )}
               <p className="service-copy">{service.description}</p>
               <div className="mt-5 overflow-hidden rounded-2xl border border-[--line]">
                 <Image
@@ -246,7 +252,7 @@ function ServicesCards({ headingTag = "h2" }: { headingTag?: "h1" | "h2" }) {
                   alt={`${service.title} placeholder visual`}
                   width={1200}
                   height={780}
-                  className="h-44 w-full object-cover"
+                  className="h-36 w-full object-cover"
                 />
               </div>
               <span className="card-arrow">Learn more -&gt;</span>
@@ -318,8 +324,9 @@ function GetInTouchSection() {
           <p className="eyebrow">Get In Touch</p>
           <h1 className="section-title">Let&apos;s Connect</h1>
           <p className="section-copy">
-            Reach out for yourself or someone you&apos;re supporting. Our team responds
-            within 24-48 hours and handles every inquiry with care and confidentiality.
+            Our team responds within 24-48 hours. You can contact us for yourself
+            or on behalf of another person. We handle all shared information with
+            care and discretion.
           </p>
 
           <div className="contact-methods">
@@ -386,4 +393,32 @@ export function PrivacyExperience() {
 
 export function GetInTouchExperience() {
   return <GetInTouchSection />;
+}
+
+export function DonateExperience() {
+  return (
+    <section className="container-rail donate-shell">
+      <div className="section-pane donate-pane reveal">
+        <p className="eyebrow">Donate</p>
+        <h1 className="section-title">Support Safa Sanctuary</h1>
+        <p className="section-copy">
+          Your contribution helps us continue providing culturally responsive,
+          community-based support for women navigating complex systems across
+          Brooklyn and Queens.
+        </p>
+        <p className="section-copy">
+          To make a donation, please contact us and our team will follow up with
+          giving options.
+        </p>
+        <div className="donate-actions">
+          <a href={`mailto:${CONTACT_EMAIL}`} className="btn-primary">
+            Email Us to Donate
+          </a>
+          <a href={`tel:${CONTACT_PHONE}`} className="btn-secondary">
+            Call {CONTACT_PHONE}
+          </a>
+        </div>
+      </div>
+    </section>
+  );
 }

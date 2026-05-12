@@ -8,6 +8,7 @@ type TypewriterTextProps = {
   highlightWord?: string;
   typingSpeedMs?: number;
   startDelayMs?: number;
+  hideCursorOnComplete?: boolean;
 };
 
 export default function TypewriterText({
@@ -16,6 +17,7 @@ export default function TypewriterText({
   highlightWord,
   typingSpeedMs = 42,
   startDelayMs = 560,
+  hideCursorOnComplete = true,
 }: TypewriterTextProps) {
   const [visibleChars, setVisibleChars] = useState(0);
 
@@ -62,7 +64,9 @@ export default function TypewriterText({
       <span>{highlightedText}</span>
       <span
         aria-hidden="true"
-        className={`typewriter-cursor ${isFinished ? "typewriter-cursor--done" : ""}`}
+        className={`typewriter-cursor ${
+          isFinished && hideCursorOnComplete ? "typewriter-cursor--done" : ""
+        }`}
       >
         |
       </span>

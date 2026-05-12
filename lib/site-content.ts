@@ -1,6 +1,7 @@
 export type NavItem = {
   href: string;
   label: string;
+  emphasis?: boolean;
 };
 
 export type ServiceItem = {
@@ -27,6 +28,7 @@ export const NAV_ITEMS: NavItem[] = [
   { href: "/", label: "Home" },
   { href: "/about-us", label: "About Us" },
   { href: "/services", label: "Services" },
+  { href: "/donate", label: "Donate", emphasis: true },
 ];
 
 export const SITE_TITLE = "Safa Sanctuary";
@@ -37,7 +39,7 @@ export const INSTAGRAM_URL =
 export const CONTACT_EMAIL = "info@safasanctuary.org";
 export const CONTACT_PHONE = "(347) 899-3109";
 
-export const HERO_TITLE = "Keeping Women from Falling Through the Cracks";
+export const HERO_TITLE = "Through The Crack";
 export const HERO_COPY =
   "In New York City, services exist - but navigating them without language access or support can be overwhelming. Safa Sanctuary bridges that gap.";
 
@@ -51,28 +53,28 @@ export const BOARD_MEMBERS: BoardMember[] = [
   {
     name: "Salma Salim",
     role: "Founder & Secretary",
-    bio: "Salma Salim, LMSW, is the founder of Safa Sanctuary Inc. Over nine years in the nonprofit sector, she has built expertise across program development, grant compliance and reporting, individual and family counseling, high school and college-level counseling, workforce development, talent recruitment, and nonprofit consulting. She founded Safa Sanctuary in response to a gap she witnessed firsthand: the absence of culturally and linguistically safe mental health services for women across Brooklyn and Queens.",
+    bio: "Salma Salim, LMSW, is the founder of Safa Sanctuary Inc. With nine years of nonprofit experience, she built this organization to close the gap in culturally and linguistically safe mental health services for women across Brooklyn and Queens.",
     image: "/images/board/salma-salim.png",
     imageAlt: "Portrait of Salma Salim",
   },
   {
     name: "Hector Mercado",
     role: "President",
-    bio: "Hector Mercado is a seasoned nonprofit leader with 20 years of experience spanning program development, staff training, regulatory compliance, quality improvement, grant reporting, and grant contract management. His deep familiarity with the operational and compliance demands of funded programs ensures that Safa Sanctuary meets every grant obligation with precision and accountability, while keeping the organization's mission grounded in strong infrastructure.",
+    bio: "Hector Mercado brings 20 years of nonprofit leadership across program development, staff training, compliance, quality improvement, and grant management. He helps ensure Safa Sanctuary delivers mission-driven services with strong operational accountability.",
     image: "/images/board/hector-placeholder.svg",
     imageAlt: "Placeholder portrait for Hector Mercado",
   },
   {
     name: "Catherine Genao",
     role: "Treasurer",
-    bio: "Catherine Genao brings a decade of nonprofit experience across program development, outcomes reporting, counseling, fundraising, and organizational development. She has a proven ability to listen closely to communities and translate what she hears into structured, effective programs that meet people where they are.",
+    bio: "Catherine Genao brings 10 years of nonprofit experience in program development, counseling, fundraising, and outcomes reporting. She is known for translating community voices into practical, effective programs.",
     image: "/images/board/catherine-genao.jpg",
     imageAlt: "Portrait of Catherine Genao",
   },
   {
     name: "Ratha Ali",
     role: "Board Member",
-    bio: "Ratha Ali brings five years of nonprofit experience in one-on-one counseling, housing support, program development, and fundraising. Known for turning ideas into action, she brings energy, vision, and genuine passion to every initiative she touches.",
+    bio: "Ratha Ali brings five years of nonprofit experience in counseling, housing support, program development, and fundraising. She is recognized for turning ideas into action with energy and care.",
     image: "/images/board/ratha-ali.png",
     imageAlt: "Portrait of Ratha Ali",
   },
@@ -97,7 +99,7 @@ export const SERVICES: ServiceItem[] = [
   {
     title: "Client Navigation & Accompaniment",
     description:
-      "Hands-on support to help clients navigate complex systems such as healthcare, legal, housing, and public benefits. We accompany clients to appointments, assist with forms and documentation, provide interpretation support when needed, and help ensure clients understand their options and next steps.",
+      "Hands-on support to navigate healthcare, legal, housing, and public benefit systems. We accompany clients to appointments, assist with forms, and help each person understand their options and next steps.",
     placeholderImage: "/images/service-placeholder-3.svg",
   },
   {
@@ -108,9 +110,9 @@ export const SERVICES: ServiceItem[] = [
   },
 ];
 
-export const SUPPORT_TITLE = "Do you or someone you know need support?";
+export const SUPPORT_TITLE = "Do You or Someone You Know Need Support?";
 export const SUPPORT_COPY =
-  "Please complete this form and a member of our team will follow up within 24-48 hours. You can reach out for yourself or on behalf of someone else. All information is kept confidential.";
+  "Please complete this form and a member of our team will follow up within 24-48 hours. You can contact us for yourself or on behalf of another person. We handle all shared information with care and discretion.";
 
 export const PRIVACY_INTRO =
   'Safa Sanctuary Inc ("Safa Sanctuary," "we," "our," or "us") is committed to protecting your privacy and handling your personal information with care, transparency, and respect. This Privacy Policy explains what information we collect, how we use it, and how we protect it, including information collected through phone calls, SMS/text messaging, online forms, and other communications facilitated through RingCentral.';

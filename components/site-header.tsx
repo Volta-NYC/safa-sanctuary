@@ -35,19 +35,19 @@ export default function SiteHeader() {
 
   return (
     <header className={headerClassName}>
-      <div className="container-rail flex h-[88px] items-center justify-between gap-6">
+      <div className="container-rail flex h-[90px] items-center justify-between gap-6">
         <Link
           href="/"
-          className="group -ml-2 inline-flex items-center transition-transform duration-300 hover:scale-[1.01] sm:-ml-3"
+          className="group -ml-3 inline-flex items-center transition-transform duration-300 hover:scale-[1.01] sm:-ml-4"
         >
-          <span className="relative block h-[58px] w-[156px] overflow-hidden sm:w-[178px]">
+          <span className="relative block h-[72px] w-[216px] sm:h-[76px] sm:w-[226px]">
             <Image
               src="/images/logo.webp"
               alt="Safa Sanctuary"
               fill
               priority
-              sizes="(max-width: 640px) 156px, 178px"
-              className="logo-pop object-cover object-[center_38%]"
+              sizes="(max-width: 640px) 216px, 226px"
+              className="logo-pop object-contain object-left"
             />
           </span>
           <span className="sr-only">Safa Sanctuary</span>
@@ -60,7 +60,7 @@ export default function SiteHeader() {
               <Link
                 key={item.href}
                 href={item.href}
-                className="nav-link"
+                className={`nav-link ${item.emphasis ? "nav-link--emphasis" : ""}`}
                 aria-current={active ? "page" : undefined}
               >
                 {item.label}
@@ -112,14 +112,16 @@ export default function SiteHeader() {
                 key={item.href}
                 href={item.href}
                 onClick={() => setMenuOpen(false)}
-                className={`rounded-lg px-3 py-3 text-base font-medium transition-colors ${
+                className={`rounded-lg px-3 py-3 text-base transition-colors ${
                   active
-                    ? "bg-[--color-sage-light] text-[--color-sage-dark]"
-                    : "text-[--color-cream] hover:bg-[--color-sage-light] hover:text-[--color-sage-dark]"
+                    ? "bg-[--color-sage-light] text-[--color-sage-dark] font-semibold"
+                    : "text-[--color-cream] hover:bg-[--color-sage-light] hover:text-[--color-sage-dark] font-medium"
                 }`}
                 aria-current={active ? "page" : undefined}
               >
-                {item.label}
+                <span className={item.emphasis ? "font-bold text-[--color-saffron-light]" : ""}>
+                  {item.label}
+                </span>
               </Link>
             );
           })}
@@ -131,6 +133,22 @@ export default function SiteHeader() {
             Get In Touch
           </Link>
         </nav>
+      </div>
+
+      <div className="contact-alert-bar">
+        <div className="container-rail">
+          <p className="contact-alert-text">
+            To contact us please call{" "}
+            <a href="tel:3478993109" className="contact-alert-link">
+              (347) 899-3109
+            </a>
+            . If this is an emergency please call{" "}
+            <a href="tel:911" className="contact-alert-link">
+              911
+            </a>
+            .
+          </p>
+        </div>
       </div>
     </header>
   );
