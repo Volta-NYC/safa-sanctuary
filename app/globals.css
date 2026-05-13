@@ -21,6 +21,8 @@
   --color-fern: #D9E3D4;
   --pattern-star: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='96' height='96' viewBox='0 0 96 96'%3E%3Cg fill='none'%3E%3Cpath d='M48 4 60 36 92 48 60 60 48 92 36 60 4 48 36 36Z' stroke='%234A6741' stroke-width='0.55' stroke-opacity='0.18'/%3E%3Cpath d='M48 18 78 48 48 78 18 48Z' stroke='%23C8922A' stroke-width='0.5' stroke-opacity='0.16'/%3E%3Ccircle cx='48' cy='48' r='10' stroke='%232E4228' stroke-width='0.45' stroke-opacity='0.13'/%3E%3C/g%3E%3C/svg%3E");
   --pattern-lattice: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='72' height='72' viewBox='0 0 72 72'%3E%3Cg fill='none'%3E%3Cpath d='M36 0 72 36 36 72 0 36Z' stroke='%234A6741' stroke-width='0.5' stroke-opacity='0.16'/%3E%3Cpath d='M36 12 60 36 36 60 12 36Z' stroke='%23C8922A' stroke-width='0.45' stroke-opacity='0.12'/%3E%3Cpath d='M0 36H72M36 0V72' stroke='%232E4228' stroke-width='0.35' stroke-opacity='0.08'/%3E%3C/g%3E%3C/svg%3E");
+  --pattern-star-bold: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='96' height='96' viewBox='0 0 96 96'%3E%3Cg fill='none'%3E%3Cpath d='M48 4 60 36 92 48 60 60 48 92 36 60 4 48 36 36Z' stroke='%234A6741' stroke-width='0.9' stroke-opacity='0.34'/%3E%3Cpath d='M48 18 78 48 48 78 18 48Z' stroke='%2395774E' stroke-width='0.75' stroke-opacity='0.28'/%3E%3Ccircle cx='48' cy='48' r='10' stroke='%232E4228' stroke-width='0.7' stroke-opacity='0.24'/%3E%3C/g%3E%3C/svg%3E");
+  --pattern-lattice-bold: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='72' height='72' viewBox='0 0 72 72'%3E%3Cg fill='none'%3E%3Cpath d='M36 0 72 36 36 72 0 36Z' stroke='%234A6741' stroke-width='0.85' stroke-opacity='0.32'/%3E%3Cpath d='M36 12 60 36 36 60 12 36Z' stroke='%2395774E' stroke-width='0.7' stroke-opacity='0.26'/%3E%3Cpath d='M0 36H72M36 0V72' stroke='%232E4228' stroke-width='0.55' stroke-opacity='0.18'/%3E%3C/g%3E%3C/svg%3E");
 
   --font-display: 'Fraunces', Georgia, serif;
   --font-body: 'DM Sans', system-ui, sans-serif;
@@ -120,13 +122,21 @@ section:not(.hero) > * {
 
 section:nth-child(even) {
   background:
+    var(--pattern-lattice-bold),
+    var(--pattern-star-bold),
     linear-gradient(180deg, rgba(232, 237, 230, 0.86), rgba(249, 245, 236, 0.78));
+  background-size: 72px 72px, 96px 96px, auto;
+  background-position: 0 0, 18px 18px, 0 0;
 }
 
 section:nth-child(odd) {
   background:
+    var(--pattern-lattice-bold),
+    var(--pattern-star-bold),
     radial-gradient(circle at 8% 10%, rgba(46, 66, 40, 0.08), transparent 24rem),
     var(--color-cream);
+  background-size: 72px 72px, 96px 96px, auto, auto;
+  background-position: 0 0, 18px 18px, 0 0, 0 0;
 }
 
 .page-shell {
@@ -1179,9 +1189,13 @@ section:nth-child(odd) {
 
 .instagram-section {
   background:
+    var(--pattern-lattice-bold),
+    var(--pattern-star-bold),
     radial-gradient(circle at 50% -10%, rgba(240, 217, 168, 0.34), transparent 24rem),
     radial-gradient(circle at 8% 90%, rgba(22, 39, 25, 0.22), transparent 24rem),
     linear-gradient(135deg, var(--color-sage-light), #d2dfcc);
+  background-size: 72px 72px, 96px 96px, auto, auto, auto;
+  background-position: 0 0, 18px 18px, 0 0, 0 0, 0 0;
   padding: 6rem 4rem;
   text-align: center;
   position: relative;
@@ -1202,9 +1216,9 @@ section:nth-child(odd) {
   content: '';
   position: absolute;
   inset: 0;
-  background-image: var(--pattern-star);
+  background-image: var(--pattern-star-bold);
   background-size: 96px 96px;
-  opacity: 0.3;
+  opacity: 0.22;
   pointer-events: none;
 }
 
