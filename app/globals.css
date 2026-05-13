@@ -171,10 +171,15 @@ section:nth-child(odd) {
   background: linear-gradient(90deg, var(--color-saffron), var(--color-sage-dark));
 }
 
-.site-nav {
+.site-header {
   position: sticky;
   top: 0;
-  z-index: 100;
+  z-index: 140;
+}
+
+.site-nav {
+  position: relative;
+  z-index: 130;
   padding: 0.7rem 2rem 0.5rem;
   display: flex;
   align-items: center;
