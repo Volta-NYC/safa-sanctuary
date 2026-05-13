@@ -408,7 +408,8 @@ export function DonateExperience() {
         </p>
         <p className="section-copy">
           To make a donation, please contact us and our team will follow up with
-          giving options.
+          giving options. Safa Sanctuary is a 501(c)(3) nonprofit organization,
+          and donations may be tax-deductible as allowed by law.
         </p>
         <div className="donate-actions">
           <a href={`mailto:${CONTACT_EMAIL}`} className="btn-primary">
