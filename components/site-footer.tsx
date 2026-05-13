@@ -18,13 +18,15 @@ export default function SiteFooter() {
       <div className="container-rail">
         <div className="footer-grid">
           <div className="space-y-4 reveal">
-            <Image
-              src="/images/logo.webp"
-              alt="Safa Sanctuary logo"
-              width={246}
-              height={99}
-              className="h-24 w-auto"
-            />
+            <div className="footer-logo-wrap">
+              <Image
+                src="/images/logo.webp"
+                alt="Safa Sanctuary logo"
+                width={246}
+                height={307}
+                className="footer-logo-image"
+              />
+            </div>
             <h3 className="text-xl font-semibold tracking-tight text-white">
               {SITE_TITLE}
             </h3>

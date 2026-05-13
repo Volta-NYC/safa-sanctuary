@@ -55,16 +55,16 @@ export default function SiteHeader() {
         <div className="container-rail flex h-[90px] items-center justify-between gap-6">
           <Link
             href="/"
-            className="group -ml-3 inline-flex items-center transition-transform duration-300 hover:scale-[1.01] sm:-ml-4"
+            className="group -ml-1 inline-flex items-center transition-transform duration-300 hover:scale-[1.01] sm:-ml-2"
           >
-            <span className="relative block h-[72px] w-[216px] sm:h-[76px] sm:w-[226px]">
+            <span className="relative block h-[84px] w-[67px] sm:h-[88px] sm:w-[70px]">
               <Image
                 src="/images/logo.webp"
                 alt="Safa Sanctuary"
                 fill
                 priority
-                sizes="(max-width: 640px) 216px, 226px"
-                className="logo-pop object-contain object-left"
+                sizes="(max-width: 640px) 67px, 70px"
+                className="logo-pop object-contain object-center"
               />
             </span>
             <span className="sr-only">Safa Sanctuary</span>
