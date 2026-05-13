@@ -202,7 +202,7 @@ section:nth-child(odd) {
   display: flex;
   align-items: center;
   justify-content: space-between;
-  background: rgba(22, 39, 25, 0.5);
+  background: rgba(22, 39, 25, 0.78);
   backdrop-filter: blur(10px);
   -webkit-backdrop-filter: blur(10px);
   transition: background var(--transition-base), border-color var(--transition-base), box-shadow var(--transition-base);
@@ -282,7 +282,7 @@ section:nth-child(odd) {
 }
 
 .site-nav .logo-pop {
-  filter: saturate(1.07) contrast(1.08) drop-shadow(0 10px 18px rgba(0, 0, 0, 0.22));
+  filter: saturate(1.12) contrast(1.14) brightness(1.03) drop-shadow(0 10px 18px rgba(0, 0, 0, 0.26));
 }
 
 .contact-alert-bar {
@@ -1457,7 +1457,7 @@ footer a:hover {
   }
 
   .site-nav {
-    padding: 0.85rem 1.25rem;
+    padding: 0.75rem 1.25rem 0.55rem;
   }
 
   .contact-alert-bar {
