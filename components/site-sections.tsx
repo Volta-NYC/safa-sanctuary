@@ -233,37 +233,39 @@ function BoardSection() {
 function ServicesCards({ headingTag = "h2" }: { headingTag?: "h1" | "h2" }) {
   const HeadingTag = headingTag;
   return (
-    <section id="services-section" className="services-section container-rail">
-      <div className="section-pane space-y-8 p-6 sm:p-8">
-        <HeadingTag className="section-title reveal">Services</HeadingTag>
-        <div className="services-grid">
-          {SERVICES.map((service, index) => (
-            <article
-              key={service.title}
-              className={`service-card reveal reveal-delay-${Math.min(index + 1, 4)}`}
-            >
-              {service.title === "Client Navigation & Accompaniment" ? (
-                <h3 className="service-title service-title-tight">
-                  Client Navigation &amp;
-                  <br />
-                  Accompaniment
-                </h3>
-              ) : (
-                <h3 className="service-title">{service.title}</h3>
-              )}
-              <p className="service-copy">{service.description}</p>
-              <div className="mt-5 overflow-hidden rounded-2xl border border-[--line]">
-                <Image
-                  src={service.placeholderImage}
-                  alt={`${service.title} placeholder visual`}
-                  width={1200}
-                  height={780}
-                  className="h-36 w-full object-cover"
-                />
-              </div>
-              <span className="card-arrow">Learn more -&gt;</span>
-            </article>
-          ))}
+    <section id="services-section" className="services-section">
+      <div className="container-rail">
+        <div className="section-pane space-y-8 p-6 sm:p-8">
+          <HeadingTag className="section-title reveal">Services</HeadingTag>
+          <div className="services-grid">
+            {SERVICES.map((service, index) => (
+              <article
+                key={service.title}
+                className={`service-card reveal reveal-delay-${Math.min(index + 1, 4)}`}
+              >
+                {service.title === "Client Navigation & Accompaniment" ? (
+                  <h3 className="service-title service-title-tight">
+                    Client Navigation &amp;
+                    <br />
+                    Accompaniment
+                  </h3>
+                ) : (
+                  <h3 className="service-title">{service.title}</h3>
+                )}
+                <p className="service-copy">{service.description}</p>
+                <div className="mt-5 overflow-hidden rounded-2xl border border-[--line]">
+                  <Image
+                    src={service.placeholderImage}
+                    alt={`${service.title} placeholder visual`}
+                    width={1200}
+                    height={780}
+                    className="h-36 w-full object-cover"
+                  />
+                </div>
+                <span className="card-arrow">Learn more -&gt;</span>
+              </article>
+            ))}
+          </div>
         </div>
       </div>
     </section>
