@@ -95,6 +95,26 @@ h3 {
 
 section {
   padding: 6rem 4rem;
+  position: relative;
+  isolation: isolate;
+  overflow: hidden;
+}
+
+section::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  pointer-events: none;
+  z-index: 0;
+  opacity: 0.18;
+  background-image: var(--pattern-lattice), var(--pattern-star);
+  background-size: 72px 72px, 108px 108px;
+  background-position: 0 0, 18px 18px;
+}
+
+section > * {
+  position: relative;
+  z-index: 1;
 }
 
 section:nth-child(even) {
@@ -119,7 +139,7 @@ section:nth-child(odd) {
   inset: 0;
   pointer-events: none;
   z-index: 1;
-  opacity: 0.085;
+  opacity: 0.11;
   background-image: var(--pattern-lattice), var(--pattern-star);
   background-size: 72px 72px, 108px 108px;
   background-position: 0 0, 18px 18px;
