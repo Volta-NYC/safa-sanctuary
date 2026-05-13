@@ -118,11 +118,16 @@ section:nth-child(odd) {
   position: fixed;
   inset: 0;
   pointer-events: none;
+  z-index: 1;
+  opacity: 0.085;
+  background-image: var(--pattern-lattice), var(--pattern-star);
+  background-size: 72px 72px, 108px 108px;
+  background-position: 0 0, 18px 18px;
+}
+
+.page-shell > * {
+  position: relative;
   z-index: 2;
-  opacity: 0.045;
-  background-image: var(--pattern-lattice);
-  background-size: 72px 72px;
-  mix-blend-mode: multiply;
 }
 
 .container-rail {
