@@ -133,30 +133,32 @@ function HomePlaceholdersSection() {
   ];
 
   return (
-    <section className="home-gallery-section container-rail">
-      <div className="section-pane space-y-8 p-8 sm:p-10">
-        <div className="space-y-3">
-          <p className="eyebrow reveal">Visual Placeholders</p>
-          <h2 className="section-title reveal reveal-delay-1">Homepage Image Blocks</h2>
-        </div>
-        <div className="grid gap-5 md:grid-cols-3">
-          {placeholders.map((item, index) => (
-            <article
-              key={item.src}
-              className={`image-placeholder-card card-lift reveal reveal-delay-${Math.min(index + 1, 3)}`}
-            >
-              <Image
-                src={item.src}
-                alt={item.title}
-                width={1200}
-                height={780}
-                className="h-44 w-full rounded-2xl object-cover"
-              />
-              <p className="mt-3 text-sm font-semibold tracking-wide text-[--ink-soft]">
-                {item.title}
-              </p>
-            </article>
-          ))}
+    <section className="home-gallery-section">
+      <div className="container-rail">
+        <div className="section-pane space-y-8 p-8 sm:p-10">
+          <div className="space-y-3">
+            <p className="eyebrow reveal">Visual Placeholders</p>
+            <h2 className="section-title reveal reveal-delay-1">Homepage Image Blocks</h2>
+          </div>
+          <div className="grid gap-5 md:grid-cols-3">
+            {placeholders.map((item, index) => (
+              <article
+                key={item.src}
+                className={`image-placeholder-card card-lift reveal reveal-delay-${Math.min(index + 1, 3)}`}
+              >
+                <Image
+                  src={item.src}
+                  alt={item.title}
+                  width={1200}
+                  height={780}
+                  className="h-44 w-full rounded-2xl object-cover"
+                />
+                <p className="mt-3 text-sm font-semibold tracking-wide text-[--ink-soft]">
+                  {item.title}
+                </p>
+              </article>
+            ))}
+          </div>
         </div>
       </div>
     </section>
