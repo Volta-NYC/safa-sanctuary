@@ -21,8 +21,6 @@ import {
 function HeroSection() {
   return (
     <section className="hero">
-      <div className="hero-geometry hero-geometry--left" aria-hidden="true" />
-      <div className="hero-geometry hero-geometry--right" aria-hidden="true" />
       <div className="hero-text">
         <p className="hero-eyebrow reveal">Nonprofit Support Network</p>
         <h1 className="reveal reveal-delay-1">Safa Sanctuary</h1>
