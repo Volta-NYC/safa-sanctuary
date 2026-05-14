@@ -186,13 +186,15 @@ function MissionSection({ mission }: { mission: string }) {
 
 function AboutIntroSection() {
   return (
-    <section className="container-rail">
-      <div className="section-pane space-y-4 p-8 sm:p-10">
-        <p className="eyebrow reveal">Who We Are</p>
-        <h2 className="section-title reveal reveal-delay-1">About Safa Sanctuary</h2>
-        <p className="section-copy reveal reveal-delay-2">
-          {ABOUT_OVERVIEW}
-        </p>
+    <section>
+      <div className="container-rail">
+        <div className="section-pane space-y-4 p-8 sm:p-10">
+          <p className="eyebrow reveal">Who We Are</p>
+          <h2 className="section-title reveal reveal-delay-1">About Safa Sanctuary</h2>
+          <p className="section-copy reveal reveal-delay-2">
+            {ABOUT_OVERVIEW}
+          </p>
+        </div>
       </div>
     </section>
   );
@@ -200,30 +202,32 @@ function AboutIntroSection() {
 
 function BoardSection() {
   return (
-    <section className="container-rail">
-      <div className="section-pane space-y-8 p-8 sm:p-10">
-        <h2 className="section-title">Board of Directors</h2>
-        <div className="board-grid">
-          {BOARD_MEMBERS.map((member, index) => (
-            <article
-              key={member.name}
-              className={`board-card reveal reveal-delay-${Math.min(index + 1, 4)}`}
-            >
-              <div className="board-photo-wrap">
-                <Image
-                  src={member.image}
-                  alt={member.imageAlt}
-                  width={1200}
-                  height={1200}
-                />
-              </div>
-              <div className="board-info">
-                <p className="board-role">{member.role}</p>
-                <h3 className="board-name">{member.name}</h3>
-                <p className="board-bio">{member.bio}</p>
-              </div>
-            </article>
-          ))}
+    <section>
+      <div className="container-rail">
+        <div className="section-pane space-y-8 p-8 sm:p-10">
+          <h2 className="section-title">Board of Directors</h2>
+          <div className="board-grid">
+            {BOARD_MEMBERS.map((member, index) => (
+              <article
+                key={member.name}
+                className={`board-card reveal reveal-delay-${Math.min(index + 1, 4)}`}
+              >
+                <div className="board-photo-wrap">
+                  <Image
+                    src={member.image}
+                    alt={member.imageAlt}
+                    width={1200}
+                    height={1200}
+                  />
+                </div>
+                <div className="board-info">
+                  <p className="board-role">{member.role}</p>
+                  <h3 className="board-name">{member.name}</h3>
+                  <p className="board-bio">{member.bio}</p>
+                </div>
+              </article>
+            ))}
+          </div>
         </div>
       </div>
     </section>
@@ -274,16 +278,18 @@ function ServicesCards({ headingTag = "h2" }: { headingTag?: "h1" | "h2" }) {
 
 function SupportFormSection({ includeSmsConsent }: { includeSmsConsent: boolean }) {
   return (
-    <section className="support-section container-rail">
-      <div className="grid gap-6 lg:grid-cols-[1fr_1.1fr] lg:items-start">
-        <div className="section-pane section-glow space-y-4 p-8 reveal">
-          <p className="eyebrow">Support Request</p>
-          <h2 className="section-title">{SUPPORT_TITLE}</h2>
-          <p className="section-copy">
-            {SUPPORT_COPY}
-          </p>
+    <section className="support-section">
+      <div className="container-rail">
+        <div className="grid gap-6 lg:grid-cols-[1fr_1.1fr] lg:items-start">
+          <div className="section-pane section-glow space-y-4 p-8 reveal">
+            <p className="eyebrow">Support Request</p>
+            <h2 className="section-title">{SUPPORT_TITLE}</h2>
+            <p className="section-copy">
+              {SUPPORT_COPY}
+            </p>
+          </div>
+          <ContactForm includeSmsConsent={includeSmsConsent} />
         </div>
-        <ContactForm includeSmsConsent={includeSmsConsent} />
       </div>
     </section>
   );
@@ -291,33 +297,35 @@ function SupportFormSection({ includeSmsConsent }: { includeSmsConsent: boolean 
 
 function PolicySection() {
   return (
-    <section className="container-rail policy-section">
-      <div className="section-pane space-y-8 p-7 sm:p-10">
-        <h1 className="section-title">Privacy Policy</h1>
-        <p className="text-base leading-8 text-[--ink-soft]">{PRIVACY_INTRO}</p>
-        <div className="space-y-8">
-          {PRIVACY_POLICY.map((section) => (
-            <section key={section.heading} className="space-y-3">
-              <h2 className="text-xl font-semibold text-[--ink-strong]">
-                {section.heading}
-              </h2>
-              {section.paragraphs?.map((paragraph) => (
-                <p key={paragraph} className="text-base leading-8 text-[--ink-soft]">
-                  {paragraph}
-                </p>
-              ))}
-              {section.bullets?.length ? (
-                <ul className="space-y-2 text-base leading-8 text-[--ink-soft]">
-                  {section.bullets.map((bullet) => (
-                    <li key={bullet} className="flex items-start gap-3">
-                      <span className="mt-3 h-1.5 w-1.5 rounded-full bg-[--accent-strong]" />
-                      <span>{bullet}</span>
-                    </li>
-                  ))}
-                </ul>
-              ) : null}
-            </section>
-          ))}
+    <section className="policy-section">
+      <div className="container-rail">
+        <div className="section-pane space-y-8 p-7 sm:p-10">
+          <h1 className="section-title">Privacy Policy</h1>
+          <p className="text-base leading-8 text-[--ink-soft]">{PRIVACY_INTRO}</p>
+          <div className="space-y-8">
+            {PRIVACY_POLICY.map((section) => (
+              <div key={section.heading} className="space-y-3">
+                <h2 className="text-xl font-semibold text-[--ink-strong]">
+                  {section.heading}
+                </h2>
+                {section.paragraphs?.map((paragraph) => (
+                  <p key={paragraph} className="text-base leading-8 text-[--ink-soft]">
+                    {paragraph}
+                  </p>
+                ))}
+                {section.bullets?.length ? (
+                  <ul className="space-y-2 text-base leading-8 text-[--ink-soft]">
+                    {section.bullets.map((bullet) => (
+                      <li key={bullet} className="flex items-start gap-3">
+                        <span className="mt-3 h-1.5 w-1.5 rounded-full bg-[--accent-strong]" />
+                        <span>{bullet}</span>
+                      </li>
+                    ))}
+                  </ul>
+                ) : null}
+              </div>
+            ))}
+          </div>
         </div>
       </div>
     </section>
@@ -326,38 +334,40 @@ function PolicySection() {
 
 function GetInTouchSection() {
   return (
-    <section className="container-rail contact-page-shell">
-      <div className="contact-page-grid">
-        <div className="section-pane contact-page-intro reveal">
-          <p className="eyebrow">Get In Touch</p>
-          <h1 className="section-title">Let&apos;s Connect</h1>
-          <p className="section-copy">
-            Our team responds within 24-48 hours. You can contact us for yourself
-            or on behalf of another person. We handle all shared information with
-            care and discretion.
-          </p>
+    <section className="contact-page-shell">
+      <div className="container-rail">
+        <div className="contact-page-grid">
+          <div className="section-pane contact-page-intro reveal">
+            <p className="eyebrow">Get In Touch</p>
+            <h1 className="section-title">Let&apos;s Connect</h1>
+            <p className="section-copy">
+              Our team responds within 24-48 hours. You can contact us for yourself
+              or on behalf of another person. We handle all shared information with
+              care and discretion.
+            </p>
 
-          <div className="contact-methods">
-            <a href={`mailto:${CONTACT_EMAIL}`} className="contact-method">
-              <span className="contact-method-label">Email</span>
-              <span className="contact-method-value">{CONTACT_EMAIL}</span>
-            </a>
-            <a href={`tel:${CONTACT_PHONE}`} className="contact-method">
-              <span className="contact-method-label">Phone</span>
-              <span className="contact-method-value">{CONTACT_PHONE}</span>
-            </a>
-            <a
-              href={INSTAGRAM_URL}
-              target="_blank"
-              rel="noopener noreferrer"
-              className="contact-method"
-            >
-              <span className="contact-method-label">Instagram</span>
-              <span className="contact-method-value">@safasanctuary</span>
-            </a>
+            <div className="contact-methods">
+              <a href={`mailto:${CONTACT_EMAIL}`} className="contact-method">
+                <span className="contact-method-label">Email</span>
+                <span className="contact-method-value">{CONTACT_EMAIL}</span>
+              </a>
+              <a href={`tel:${CONTACT_PHONE}`} className="contact-method">
+                <span className="contact-method-label">Phone</span>
+                <span className="contact-method-value">{CONTACT_PHONE}</span>
+              </a>
+              <a
+                href={INSTAGRAM_URL}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="contact-method"
+              >
+                <span className="contact-method-label">Instagram</span>
+                <span className="contact-method-value">@safasanctuary</span>
+              </a>
+            </div>
           </div>
+          <ContactForm includeSmsConsent={true} />
         </div>
-        <ContactForm includeSmsConsent={true} />
       </div>
     </section>
   );
@@ -405,27 +415,29 @@ export function GetInTouchExperience() {
 
 export function DonateExperience() {
   return (
-    <section className="container-rail donate-shell">
-      <div className="section-pane donate-pane reveal">
-        <p className="eyebrow">Donate</p>
-        <h1 className="section-title">Support Safa Sanctuary</h1>
-        <p className="section-copy">
-          Your contribution helps us continue providing culturally responsive,
-          community-based support for women navigating complex systems across
-          Brooklyn and Queens.
-        </p>
-        <p className="section-copy">
-          To make a donation, please contact us and our team will follow up with
-          giving options. Safa Sanctuary is a 501(c)(3) nonprofit organization,
-          and donations may be tax-deductible as allowed by law.
-        </p>
-        <div className="donate-actions">
-          <a href={`mailto:${CONTACT_EMAIL}`} className="btn-primary">
-            Email Us to Donate
-          </a>
-          <a href={`tel:${CONTACT_PHONE}`} className="btn-secondary">
-            Call {CONTACT_PHONE}
-          </a>
+    <section className="donate-shell">
+      <div className="container-rail">
+        <div className="section-pane donate-pane reveal">
+          <p className="eyebrow">Donate</p>
+          <h1 className="section-title">Support Safa Sanctuary</h1>
+          <p className="section-copy">
+            Your contribution helps us continue providing culturally responsive,
+            community-based support for women navigating complex systems across
+            Brooklyn and Queens.
+          </p>
+          <p className="section-copy">
+            To make a donation, please contact us and our team will follow up with
+            giving options. Safa Sanctuary is a 501(c)(3) nonprofit organization,
+            and donations may be tax-deductible as allowed by law.
+          </p>
+          <div className="donate-actions">
+            <a href={`mailto:${CONTACT_EMAIL}`} className="btn-primary">
+              Email Us to Donate
+            </a>
+            <a href={`tel:${CONTACT_PHONE}`} className="btn-secondary">
+              Call {CONTACT_PHONE}
+            </a>
+          </div>
         </div>
       </div>
     </section>
