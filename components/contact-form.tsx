@@ -57,7 +57,7 @@ export default function ContactForm({
           </legend>
           <label className="radio-row">
             <input type="radio" name="smsConsent" value="yes" />
-            <span>
+            <span className="radio-row-copy">
               I consent to receive conversational and informational SMS from
               Safa Sanctuary Inc related to my inquiry or services. Reply STOP
               to opt out, and HELP for support. Message and data rates may
@@ -66,7 +66,9 @@ export default function ContactForm({
           </label>
           <label className="radio-row">
             <input type="radio" name="smsConsent" value="no" />
-            <span>I do not consent to receive SMS messages.</span>
+            <span className="radio-row-copy">
+              I do not consent to receive SMS messages.
+            </span>
           </label>
         </fieldset>
       ) : null}

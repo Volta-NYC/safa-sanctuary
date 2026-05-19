@@ -25,12 +25,13 @@ function HeroSection() {
         <p className="hero-eyebrow reveal">Nonprofit Support Network</p>
         <h1 className="reveal reveal-delay-1">Safa Sanctuary</h1>
         <h2 className="hero-title hero-title--typed reveal reveal-delay-2">
-          <span className="hero-title-static">Keeping Women from Falling</span>
-          <span className="hero-title-dynamic">
+          <span className="hero-title-static">Keeping Women from</span>
+          <span className="hero-title-dynamic hero-title-dynamic--sentence">
+            <span className="hero-title-leading">Falling </span>
             <TypewriterText
               text={HERO_TITLE}
               highlightWord="Crack"
-              typingSpeedMs={120}
+              typingSpeedMs={185}
             />
           </span>
         </h2>
@@ -245,17 +246,17 @@ function ServicesCards({ headingTag = "h2" }: { headingTag?: "h1" | "h2" }) {
                 key={service.title}
                 className={`service-card reveal reveal-delay-${Math.min(index + 1, 4)}`}
               >
-                {service.title === "Client Navigation & Accompaniment" ? (
-                  <h3 className="service-title service-title-tight">
-                    Client Navigation &amp;
-                    <br />
-                    Accompaniment
+                <div className="service-copy-block">
+                  <h3
+                    className={`service-title ${
+                      service.title.length > 34 ? "service-title-compact" : ""
+                    }`}
+                  >
+                    {service.title}
                   </h3>
-                ) : (
-                  <h3 className="service-title">{service.title}</h3>
-                )}
-                <p className="service-copy">{service.description}</p>
-                <div className="mt-5 overflow-hidden rounded-2xl border border-[--line]">
+                  <p className="service-copy">{service.description}</p>
+                </div>
+                <div className="service-visual overflow-hidden rounded-2xl border border-[--line]">
                   <Image
                     src={service.placeholderImage}
                     alt={`${service.title} placeholder visual`}
@@ -424,17 +425,62 @@ export function DonateExperience() {
             Brooklyn and Queens.
           </p>
           <p className="section-copy">
-            To make a donation, please contact us and our team will follow up with
-            giving options. Safa Sanctuary is a 501(c)(3) nonprofit organization,
-            and donations may be tax-deductible as allowed by law.
+            Safa Sanctuary is a 501(c)(3) nonprofit organization, and donations
+            may be tax-deductible as allowed by law. You can support the work
+            directly through Zelle or through the secure online payment link
+            below.
           </p>
-          <div className="donate-actions">
-            <a href={`mailto:${CONTACT_EMAIL}`} className="btn-primary">
-              Email Us to Donate
-            </a>
-            <a href={`tel:${CONTACT_PHONE}`} className="btn-secondary">
-              Call {CONTACT_PHONE}
-            </a>
+          <div className="donate-methods">
+            <div className="donate-method-card">
+              <p className="donate-method-label">Zelle</p>
+              <h2 className="donate-method-title">board@safasanctuary.org</h2>
+              <p className="donate-method-copy">
+                Send your donation by Zelle using the email above.
+              </p>
+              <a href="mailto:board@safasanctuary.org" className="btn-secondary">
+                Email the Zelle Address
+              </a>
+            </div>
+            <div className="donate-method-card donate-method-card--accent">
+              <p className="donate-method-label">Online Payment</p>
+              <h2 className="donate-method-title">Pay Securely Online</h2>
+              <p className="donate-method-copy">
+                Use Safa Sanctuary&apos;s Autobooks payment page if you prefer to
+                donate online.
+              </p>
+              <div className="donate-actions">
+                <a
+                  href="https://app.autobooks.co/pay/safa-sanctuary"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="btn-primary"
+                >
+                  Open Donation Page
+                </a>
+                <a href={`tel:${CONTACT_PHONE}`} className="btn-secondary">
+                  Call {CONTACT_PHONE}
+                </a>
+              </div>
+            </div>
+          </div>
+          <div className="donate-qr">
+            <div className="donate-qr-card">
+              <div className="donate-qr-image-wrap">
+                <Image
+                  src="/images/donate-qr-code.png"
+                  alt="QR code for Safa Sanctuary donation payment page"
+                  width={256}
+                  height={256}
+                />
+              </div>
+              <div className="donate-qr-copy">
+                <p className="donate-method-label">Scan to Donate</p>
+                <p className="section-copy">
+                  Scan this QR code to open the Safa Sanctuary payment page on
+                  your phone.
+                </p>
+              </div>
+            </div>
           </div>
         </div>
       </div>

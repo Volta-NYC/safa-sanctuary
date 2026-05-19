@@ -498,6 +498,17 @@ section:nth-child(odd) {
   margin-top: 0.2rem;
 }
 
+.hero-title-dynamic--sentence {
+  display: inline-flex;
+  align-items: baseline;
+  gap: 0;
+  white-space: nowrap;
+}
+
+.hero-title-leading {
+  display: inline-block;
+}
+
 .typewriter-cursor {
   display: inline-block;
   margin-left: 0.12em;
@@ -670,6 +681,8 @@ section:nth-child(odd) {
 
 .service-card {
   position: relative;
+  display: flex;
+  flex-direction: column;
   background:
     var(--pattern-star),
     linear-gradient(180deg, rgba(255, 255, 255, 0.96), rgba(232, 237, 230, 0.78)),
@@ -729,12 +742,14 @@ section:nth-child(odd) {
 
 .service-card h3,
 .service-title {
-  font-size: 1.2rem;
-  margin-bottom: 0.75rem;
+  font-size: clamp(0.98rem, 1.45vw, 1.16rem);
+  margin-bottom: 0.6rem;
   margin-top: 0.5rem;
   max-width: calc(100% - 4.25rem);
   color: var(--color-evergreen);
-  line-height: 1.32;
+  line-height: 1.24;
+  white-space: nowrap;
+  letter-spacing: -0.01em;
 }
 
 .service-card p,
@@ -744,15 +759,23 @@ section:nth-child(odd) {
   line-height: 1.62;
 }
 
-.service-title-tight {
-  margin-top: 0.1rem;
+.service-title-compact {
+  font-size: clamp(0.88rem, 1.2vw, 1.02rem);
+}
+
+.service-copy-block {
+  min-height: 12.25rem;
+}
+
+.service-visual {
+  margin-top: 1rem;
 }
 
 .service-card .card-arrow {
   display: inline-flex;
   align-items: center;
   gap: 6px;
-  margin-top: 1.25rem;
+  margin-top: 0.85rem;
   font-size: 0.85rem;
   font-weight: 500;
   color: var(--color-canopy);
@@ -1112,9 +1135,10 @@ section:nth-child(odd) {
 }
 
 .radio-row {
-  display: flex;
-  align-items: flex-start;
-  gap: 0.6rem;
+  display: grid;
+  grid-template-columns: 18px 1fr;
+  align-items: start;
+  column-gap: 0.7rem;
   font-size: 0.88rem;
   line-height: 1.55;
   color: rgba(33, 56, 32, 0.74);
@@ -1123,13 +1147,15 @@ section:nth-child(odd) {
 }
 
 .radio-row input {
-  width: auto;
-  flex-shrink: 0;
-  margin-top: 0.31rem;
+  width: 18px;
+  height: 18px;
+  margin: 0.1rem 0 0;
+  accent-color: var(--color-canopy);
 }
 
-.radio-row span {
+.radio-row-copy {
   display: block;
+  line-height: 1.6;
 }
 
 .instagram-section {
@@ -1435,11 +1461,102 @@ footer a:hover {
   padding: 2.8rem;
 }
 
+.donate-methods {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 1rem;
+  margin-top: 2rem;
+}
+
+.donate-method-card {
+  position: relative;
+  padding: 1.4rem;
+  border: 1px solid rgba(22, 39, 25, 0.14);
+  border-radius: 18px;
+  background:
+    linear-gradient(180deg, rgba(255, 255, 255, 0.92), rgba(232, 237, 230, 0.78));
+  box-shadow: 0 16px 36px rgba(22, 39, 25, 0.08);
+}
+
+.donate-method-card::after {
+  content: '';
+  position: absolute;
+  inset: 0;
+  border-radius: inherit;
+  pointer-events: none;
+  opacity: 0.18;
+  background-image: var(--pattern-star);
+  background-size: 108px 108px;
+}
+
+.donate-method-card > * {
+  position: relative;
+  z-index: 1;
+}
+
+.donate-method-card--accent {
+  background:
+    linear-gradient(180deg, rgba(240, 217, 168, 0.22), rgba(255, 255, 255, 0.94)),
+    linear-gradient(180deg, rgba(255, 255, 255, 0.92), rgba(232, 237, 230, 0.78));
+}
+
+.donate-method-label {
+  font-size: 0.78rem;
+  font-weight: 700;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: var(--color-canopy);
+  margin-bottom: 0.75rem;
+}
+
+.donate-method-title {
+  font-size: clamp(1.25rem, 2vw, 1.8rem);
+  font-style: normal;
+  margin-bottom: 0.7rem;
+}
+
+.donate-method-copy {
+  color: rgba(33, 56, 32, 0.76);
+  line-height: 1.7;
+  margin-bottom: 1rem;
+}
+
 .donate-actions {
-  margin-top: 1.8rem;
   display: flex;
   flex-wrap: wrap;
   gap: 0.9rem;
+}
+
+.donate-qr {
+  margin-top: 1.15rem;
+}
+
+.donate-qr-card {
+  display: grid;
+  grid-template-columns: 180px 1fr;
+  gap: 1.25rem;
+  align-items: center;
+  padding: 1.25rem;
+  border-radius: 18px;
+  border: 1px solid rgba(22, 39, 25, 0.14);
+  background: rgba(255, 255, 255, 0.72);
+}
+
+.donate-qr-image-wrap {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0.8rem;
+  background: rgba(255, 255, 255, 0.94);
+  border-radius: 16px;
+  border: 1px solid rgba(22, 39, 25, 0.12);
+}
+
+.donate-qr-image-wrap img {
+  width: 100%;
+  height: auto;
+  max-width: 160px;
+  display: block;
 }
 
 .reveal {
@@ -1581,6 +1698,12 @@ footer a:hover {
     min-height: 3.3em;
   }
 
+  .hero-title-dynamic--sentence {
+    white-space: normal;
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+
   .instagram-title-line {
     white-space: normal;
   }
@@ -1628,6 +1751,22 @@ footer a:hover {
 
   .instagram-preview-grid {
     gap: 0.7rem;
+  }
+
+  .service-card h3,
+  .service-title,
+  .service-title-compact {
+    white-space: normal;
+    font-size: 1.12rem;
+  }
+
+  .service-copy-block {
+    min-height: auto;
+  }
+
+  .donate-methods,
+  .donate-qr-card {
+    grid-template-columns: 1fr;
   }
 
   .footer-grid {
