@@ -39,7 +39,7 @@ export const INSTAGRAM_URL =
 export const CONTACT_EMAIL = "info@safasanctuary.org";
 export const CONTACT_PHONE = "(347) 899-3109";
 
-export const HERO_TITLE = "Through The Crack";
+export const HERO_TITLE = "Falling Through The Crack";
 export const HERO_COPY =
   "In New York City, services exist - but navigating them without language access or support can be overwhelming. Safa Sanctuary bridges that gap.";
 

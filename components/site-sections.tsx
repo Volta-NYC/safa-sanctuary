@@ -27,7 +27,6 @@ function HeroSection() {
         <h2 className="hero-title hero-title--typed reveal reveal-delay-2">
           <span className="hero-title-static">Keeping Women from</span>
           <span className="hero-title-dynamic hero-title-dynamic--sentence">
-            <span className="hero-title-leading">Falling </span>
             <TypewriterText
               text={HERO_TITLE}
               highlightWord="Crack"
