@@ -114,62 +114,21 @@ function InstagramSpotlightSection() {
   );
 }
 
-function HomePlaceholdersSection() {
-  const placeholders = [
-    {
-      src: "/images/events/soft-launch-branding-table.jpg",
-      title: "Soft Launch Details",
-    },
-    {
-      src: "/images/events/soft-launch-floral-portrait.jpg",
-      title: "Founder Celebration",
-    },
-    {
-      src: "/images/events/soft-launch-workshop-table.jpg",
-      title: "Community Workshop Moments",
-    },
-  ];
-
-  return (
-    <section className="home-gallery-section">
-      <div className="container-rail">
-        <div className="section-pane space-y-8 p-8 sm:p-10">
-          <div className="space-y-3">
-            <p className="eyebrow reveal">Soft Launch</p>
-            <h2 className="section-title reveal reveal-delay-1">Event Highlights</h2>
-          </div>
-          <div className="grid gap-5 md:grid-cols-3">
-            {placeholders.map((item, index) => (
-              <article
-                key={item.src}
-                className={`image-placeholder-card card-lift reveal reveal-delay-${Math.min(index + 1, 3)}`}
-              >
-                <Image
-                  src={item.src}
-                  alt={item.title}
-                  width={1200}
-                  height={780}
-                  className="h-44 w-full rounded-2xl object-cover"
-                />
-                <p className="mt-3 text-sm font-semibold tracking-wide text-[--ink-soft]">
-                  {item.title}
-                </p>
-              </article>
-            ))}
-          </div>
-        </div>
-      </div>
-    </section>
-  );
-}
-
-function MissionSection({ mission }: { mission: string }) {
+function MissionSection({
+  mission,
+  imageSrc = "/images/events/soft-launch-founder-bouquet.jpg",
+  imageAlt = "Founder portrait from Safa Sanctuary's soft launch",
+}: {
+  mission: string;
+  imageSrc?: string;
+  imageAlt?: string;
+}) {
   return (
     <section className="mission-section">
       <div className="mission-image-col">
         <Image
-          src="/images/events/soft-launch-founder-bouquet.jpg"
-          alt="Founder portrait from Safa Sanctuary's soft launch"
+          src={imageSrc}
+          alt={imageAlt}
           width={1080}
           height={1350}
         />
@@ -375,7 +334,6 @@ export function HomeExperience() {
   return (
     <>
       <HeroSection />
-      <HomePlaceholdersSection />
       <InstagramSpotlightSection />
       <MissionSection mission={HOME_MISSION} />
       <ServicesCards />
@@ -388,7 +346,11 @@ export function AboutExperience() {
   return (
     <>
       <AboutIntroSection />
-      <MissionSection mission={ABOUT_MISSION} />
+      <MissionSection
+        mission={ABOUT_MISSION}
+        imageSrc="/images/board/salma-salim-soft-launch.jpg"
+        imageAlt="Soft launch portrait of Salma Salim"
+      />
       <BoardSection />
     </>
   );

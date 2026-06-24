@@ -54,8 +54,8 @@ export const BOARD_MEMBERS: BoardMember[] = [
     name: "Salma Salim",
     role: "Founder & Secretary",
     bio: "Salma Salim, LMSW, is the founder of Safa Sanctuary Inc. With nine years of nonprofit experience, she built this organization to close the gap in culturally and linguistically safe mental health services for women across Brooklyn and Queens.",
-    image: "/images/board/salma-salim-soft-launch.jpg",
-    imageAlt: "Soft launch portrait of Salma Salim",
+    image: "/images/board/salma-salim.png",
+    imageAlt: "Portrait of Salma Salim",
   },
   {
     name: "Hector Mercado",
