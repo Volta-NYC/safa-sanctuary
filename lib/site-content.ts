@@ -54,15 +54,15 @@ export const BOARD_MEMBERS: BoardMember[] = [
     name: "Salma Salim",
     role: "Founder & Secretary",
     bio: "Salma Salim, LMSW, is the founder of Safa Sanctuary Inc. With nine years of nonprofit experience, she built this organization to close the gap in culturally and linguistically safe mental health services for women across Brooklyn and Queens.",
-    image: "/images/board/salma-salim.png",
-    imageAlt: "Portrait of Salma Salim",
+    image: "/images/board/salma-salim-soft-launch.jpg",
+    imageAlt: "Soft launch portrait of Salma Salim",
   },
   {
     name: "Hector Mercado",
     role: "President",
     bio: "Hector Mercado brings 20 years of nonprofit leadership across program development, staff training, compliance, quality improvement, and grant management. He helps ensure Safa Sanctuary delivers mission-driven services with strong operational accountability.",
-    image: "/images/board/hector-placeholder.svg",
-    imageAlt: "Placeholder portrait for Hector Mercado",
+    image: "/images/board/hector-mercado.png",
+    imageAlt: "Portrait of Hector Mercado",
   },
   {
     name: "Catherine Genao",
@@ -100,7 +100,7 @@ export const SERVICES: ServiceItem[] = [
     title: "Client Navigation & Accompaniment",
     description:
       "Hands-on support to navigate healthcare, legal, housing, and public benefit systems. We accompany clients to appointments, assist with forms, and help each person understand their options and next steps.",
-    placeholderImage: "/images/events/soft-launch-candle-guest.jpg",
+    placeholderImage: "/images/events/soft-launch-indoor-gathering.jpg",
   },
   {
     title: "Culturally Responsive Education & Empowerment",
