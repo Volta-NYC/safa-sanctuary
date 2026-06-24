@@ -91,20 +91,20 @@ function InstagramSpotlightSection() {
         </div>
         <div className="instagram-preview-grid">
           <Image
-            src="/images/home-placeholder-1.svg"
-            alt="Instagram preview placeholder 1"
+            src="/images/events/soft-launch-cupcakes.jpg"
+            alt="Cupcakes from Safa Sanctuary's soft launch"
             width={800}
             height={560}
           />
           <Image
-            src="/images/home-placeholder-2.svg"
-            alt="Instagram preview placeholder 2"
+            src="/images/events/soft-launch-community-totes.jpg"
+            alt="Guests holding tote bags at Safa Sanctuary's soft launch"
             width={800}
             height={560}
           />
           <Image
-            src="/images/home-placeholder-3.svg"
-            alt="Instagram preview placeholder 3"
+            src="/images/events/soft-launch-guests-indoors.jpg"
+            alt="Guests indoors during Safa Sanctuary's soft launch"
             width={800}
             height={560}
           />
@@ -117,16 +117,16 @@ function InstagramSpotlightSection() {
 function HomePlaceholdersSection() {
   const placeholders = [
     {
-      src: "/images/home-placeholder-1.svg",
-      title: "Community Gathering Placeholder",
+      src: "/images/events/soft-launch-branding-table.jpg",
+      title: "Soft Launch Details",
     },
     {
-      src: "/images/home-placeholder-2.svg",
-      title: "Client Advocacy Placeholder",
+      src: "/images/events/soft-launch-floral-portrait.jpg",
+      title: "Founder Celebration",
     },
     {
-      src: "/images/home-placeholder-3.svg",
-      title: "Education Workshop Placeholder",
+      src: "/images/events/soft-launch-workshop-table.jpg",
+      title: "Community Workshop Moments",
     },
   ];
 
@@ -135,8 +135,8 @@ function HomePlaceholdersSection() {
       <div className="container-rail">
         <div className="section-pane space-y-8 p-8 sm:p-10">
           <div className="space-y-3">
-            <p className="eyebrow reveal">Visual Placeholders</p>
-            <h2 className="section-title reveal reveal-delay-1">Homepage Image Blocks</h2>
+            <p className="eyebrow reveal">Soft Launch</p>
+            <h2 className="section-title reveal reveal-delay-1">Event Highlights</h2>
           </div>
           <div className="grid gap-5 md:grid-cols-3">
             {placeholders.map((item, index) => (
@@ -168,8 +168,8 @@ function MissionSection({ mission }: { mission: string }) {
     <section className="mission-section">
       <div className="mission-image-col">
         <Image
-          src="/images/mission.webp"
-          alt="Safa Sanctuary mission"
+          src="/images/events/soft-launch-founder-bouquet.jpg"
+          alt="Founder portrait from Safa Sanctuary's soft launch"
           width={1080}
           height={1350}
         />

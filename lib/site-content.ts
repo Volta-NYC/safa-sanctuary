@@ -88,25 +88,25 @@ export const SERVICES: ServiceItem[] = [
     title: "Community Support Line",
     description:
       "A confidential first point of contact for women seeking guidance, clarity, or support. We listen, assess needs, and help callers understand their options for navigating legal, medical, housing, and community services - without pressure or judgment.",
-    placeholderImage: "/images/service-placeholder-1.svg",
+    placeholderImage: "/images/events/soft-launch-rooftop-mingling.jpg",
   },
   {
     title: "Case Management & Advocacy",
     description:
       "Ongoing one-on-one support to help women navigate systems that are often confusing or inaccessible. We help coordinate care, communicate with service providers, and advocate for clients' needs with dignity and cultural understanding.",
-    placeholderImage: "/images/service-placeholder-2.svg",
+    placeholderImage: "/images/events/soft-launch-guest-duo.jpg",
   },
   {
     title: "Client Navigation & Accompaniment",
     description:
       "Hands-on support to navigate healthcare, legal, housing, and public benefit systems. We accompany clients to appointments, assist with forms, and help each person understand their options and next steps.",
-    placeholderImage: "/images/service-placeholder-3.svg",
+    placeholderImage: "/images/events/soft-launch-candle-guest.jpg",
   },
   {
     title: "Culturally Responsive Education & Empowerment",
     description:
       "Education and skill-building rooted in cultural understanding and lived experience. Safa provides workshops, resources, and one-on-one guidance that help clients understand their rights, options, and systems impacting their lives, so they can make informed decisions with confidence.",
-    placeholderImage: "/images/service-placeholder-4.svg",
+    placeholderImage: "/images/events/soft-launch-craft-activity.jpg",
   },
 ];
 
