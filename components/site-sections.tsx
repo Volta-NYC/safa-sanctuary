@@ -22,7 +22,6 @@ function HeroSection() {
   return (
     <section className="hero">
       <div className="hero-text">
-        <p className="hero-eyebrow reveal">Nonprofit Support Network</p>
         <h1 className="reveal reveal-delay-1">Safa Sanctuary</h1>
         <h2 className="hero-title hero-title--typed reveal reveal-delay-2">
           <span className="hero-title-static">Keeping Women from</span>
@@ -114,10 +113,124 @@ function InstagramSpotlightSection() {
   );
 }
 
+type GalleryImage = {
+  src: string;
+  alt: string;
+  title: string;
+};
+
+function ImageGallerySection({
+  eyebrow,
+  title,
+  images,
+}: {
+  eyebrow: string;
+  title: string;
+  images: GalleryImage[];
+}) {
+  return (
+    <section className="home-gallery-section">
+      <div className="container-rail">
+        <div className="section-pane space-y-8 p-8 sm:p-10">
+          <div className="space-y-3">
+            <p className="eyebrow reveal">{eyebrow}</p>
+            <h2 className="section-title reveal reveal-delay-1">{title}</h2>
+          </div>
+          <div className="gallery-grid">
+            {images.map((item, index) => (
+              <article
+                key={item.src}
+                className={`image-placeholder-card card-lift reveal reveal-delay-${Math.min(index + 1, 4)}`}
+              >
+                <Image
+                  src={item.src}
+                  alt={item.alt}
+                  width={1200}
+                  height={780}
+                  className="gallery-card-image"
+                />
+                <p className="mt-3 text-sm font-semibold tracking-wide text-[--ink-soft]">
+                  {item.title}
+                </p>
+              </article>
+            ))}
+          </div>
+        </div>
+      </div>
+    </section>
+  );
+}
+
+const HOME_SERVICE_GALLERY: GalleryImage[] = [
+  {
+    src: "/images/events/soft-launch-community-totes.jpg",
+    alt: "Guests holding tote bags at the Safa Sanctuary soft launch",
+    title: "Community Welcome",
+  },
+  {
+    src: "/images/events/soft-launch-rooftop-mingling.jpg",
+    alt: "Guests mingling on the rooftop at the Safa Sanctuary soft launch",
+    title: "Rooftop Gathering",
+  },
+  {
+    src: "/images/events/soft-launch-guests-indoors.jpg",
+    alt: "Guests inside during the Safa Sanctuary soft launch",
+    title: "Indoor Community Space",
+  },
+  {
+    src: "/images/events/soft-launch-catering-table.jpg",
+    alt: "Food table from the Safa Sanctuary soft launch",
+    title: "Shared Table",
+  },
+  {
+    src: "/images/events/soft-launch-community-circle.jpg",
+    alt: "A community circle during the Safa Sanctuary soft launch",
+    title: "Community Circle",
+  },
+  {
+    src: "/images/events/soft-launch-pastry-display.jpg",
+    alt: "Pastry and information display from the Safa Sanctuary soft launch",
+    title: "Hospitality Details",
+  },
+];
+
+const SERVICES_GALLERY: GalleryImage[] = [
+  {
+    src: "/images/events/soft-launch-workshop-table.jpg",
+    alt: "Workshop table from the Safa Sanctuary soft launch",
+    title: "Workshop Materials",
+  },
+  {
+    src: "/images/events/soft-launch-craft-activity.jpg",
+    alt: "Hands-on activity station at the Safa Sanctuary soft launch",
+    title: "Hands-On Activities",
+  },
+  {
+    src: "/images/events/soft-launch-indoor-gathering.jpg",
+    alt: "Community members gathering indoors at the Safa Sanctuary soft launch",
+    title: "Supportive Gathering",
+  },
+  {
+    src: "/images/events/soft-launch-makers-table.jpg",
+    alt: "Guests gathered around a makers table at the Safa Sanctuary soft launch",
+    title: "Collaborative Space",
+  },
+  {
+    src: "/images/events/soft-launch-branding-table.jpg",
+    alt: "Branding and welcome table from the Safa Sanctuary soft launch",
+    title: "Welcome Table",
+  },
+  {
+    src: "/images/events/soft-launch-cupcakes.jpg",
+    alt: "Cupcakes from the Safa Sanctuary soft launch",
+    title: "Celebration Details",
+  },
+];
+
 function MissionSection({
   mission,
-  imageSrc = "/images/events/soft-launch-founder-bouquet.jpg",
-  imageAlt = "Founder portrait from Safa Sanctuary's soft launch",
+  imageSrc = "/images/events/soft-launch-rooftop-mingling.jpg",
+  imageAlt = "Community gathering during Safa Sanctuary's soft launch",
 }: {
   mission: string;
   imageSrc?: string;
@@ -213,15 +326,6 @@ function ServicesCards({ headingTag = "h2" }: { headingTag?: "h1" | "h2" }) {
                     {service.title}
                   </h3>
                   <p className="service-copy">{service.description}</p>
-                </div>
-                <div className="service-visual overflow-hidden rounded-2xl border border-[--line]">
-                  <Image
-                    src={service.placeholderImage}
-                    alt={`${service.title} placeholder visual`}
-                    width={1200}
-                    height={780}
-                    className="h-36 w-full object-cover"
-                  />
                 </div>
                 <span className="card-arrow">Learn more -&gt;</span>
               </article>
@@ -337,6 +441,11 @@ export function HomeExperience() {
       <InstagramSpotlightSection />
       <MissionSection mission={HOME_MISSION} />
       <ServicesCards />
+      <ImageGallerySection
+        eyebrow="Community Moments"
+        title="Images From Safa Sanctuary"
+        images={HOME_SERVICE_GALLERY}
+      />
       <SupportFormSection includeSmsConsent={false} />
     </>
   );
@@ -348,8 +457,8 @@ export function AboutExperience() {
       <AboutIntroSection />
       <MissionSection
         mission={ABOUT_MISSION}
-        imageSrc="/images/events/soft-launch-floral-portrait.jpg"
-        imageAlt="Floral soft launch portrait on the About Us mission section"
+        imageSrc="/images/events/soft-launch-guests-indoors.jpg"
+        imageAlt="Guests gathering during the Safa Sanctuary soft launch"
       />
       <BoardSection />
     </>
@@ -360,6 +469,11 @@ export function ServicesExperience() {
   return (
     <>
       <ServicesCards headingTag="h1" />
+      <ImageGallerySection
+        eyebrow="Services In Practice"
+        title="Community Images"
+        images={SERVICES_GALLERY}
+      />
       <SupportFormSection includeSmsConsent={true} />
     </>
   );

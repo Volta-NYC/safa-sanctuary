@@ -758,18 +758,14 @@ section:nth-child(odd) {
 }
 
 .service-copy-block {
-  min-height: 12.25rem;
-}
-
-.service-visual {
-  margin-top: 1rem;
+  min-height: 10.75rem;
 }
 
 .service-card .card-arrow {
   display: inline-flex;
   align-items: center;
   gap: 6px;
-  margin-top: 0.85rem;
+  margin-top: 1.1rem;
   font-size: 0.85rem;
   font-weight: 500;
   color: var(--color-canopy);
@@ -1306,6 +1302,12 @@ section:nth-child(odd) {
   transform: rotate(45deg);
 }
 
+.gallery-grid {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 1.25rem;
+}
+
 .image-placeholder-card {
   position: relative;
   background:
@@ -1334,6 +1336,13 @@ section:nth-child(odd) {
 
 .image-placeholder-card img {
   clip-path: polygon(6% 0, 94% 0, 100% 6%, 100% 94%, 94% 100%, 6% 100%, 0 94%, 0 6%);
+}
+
+.gallery-card-image {
+  width: 100%;
+  height: 15rem;
+  object-fit: cover;
+  border-radius: 1rem;
 }
 
 .card-lift {
@@ -1705,7 +1714,8 @@ footer a:hover {
   }
 
   .services-grid,
-  .board-grid {
+  .board-grid,
+  .gallery-grid {
     grid-template-columns: 1fr;
   }
 
