@@ -163,34 +163,34 @@ function ImageGallerySection({
 
 const HOME_SERVICE_GALLERY: GalleryImage[] = [
   {
-    src: "/images/events/soft-launch-community-totes.jpg",
-    alt: "Guests holding tote bags at the Safa Sanctuary soft launch",
-    title: "Community Welcome",
-  },
-  {
-    src: "/images/events/soft-launch-rooftop-mingling.jpg",
-    alt: "Guests mingling on the rooftop at the Safa Sanctuary soft launch",
+    src: "/images/events/home-gallery-01.jpg",
+    alt: "Guests gathering on the rooftop at the Safa Sanctuary soft launch",
     title: "Rooftop Gathering",
   },
   {
-    src: "/images/events/soft-launch-guests-indoors.jpg",
-    alt: "Guests inside during the Safa Sanctuary soft launch",
-    title: "Indoor Community Space",
+    src: "/images/events/home-gallery-02.jpg",
+    alt: "Story display and guests during the Safa Sanctuary soft launch",
+    title: "Community Story",
   },
   {
-    src: "/images/events/soft-launch-catering-table.jpg",
-    alt: "Food table from the Safa Sanctuary soft launch",
+    src: "/images/events/home-gallery-03.jpg",
+    alt: "Speakers sharing during the Safa Sanctuary soft launch",
+    title: "Shared Voices",
+  },
+  {
+    src: "/images/events/home-gallery-04.jpg",
+    alt: "Community members gathered outdoors at the Safa Sanctuary soft launch",
+    title: "Gathered Outdoors",
+  },
+  {
+    src: "/images/events/home-gallery-05.jpg",
+    alt: "Food table details from the Safa Sanctuary soft launch",
     title: "Shared Table",
   },
   {
-    src: "/images/events/soft-launch-community-circle.jpg",
-    alt: "A community circle during the Safa Sanctuary soft launch",
-    title: "Community Circle",
-  },
-  {
-    src: "/images/events/soft-launch-pastry-display.jpg",
-    alt: "Pastry and information display from the Safa Sanctuary soft launch",
-    title: "Hospitality Details",
+    src: "/images/events/home-gallery-06.jpg",
+    alt: "Guests seated near a Safa Sanctuary service poster",
+    title: "Community Support",
   },
 ];
 
