@@ -461,8 +461,8 @@ export function AboutExperience() {
       <AboutIntroSection />
       <MissionSection
         mission={ABOUT_MISSION}
-        imageSrc="/images/events/soft-launch-guests-indoors.jpg"
-        imageAlt="Guests gathering during the Safa Sanctuary soft launch"
+        imageSrc="/images/events/about-mission-board-rooftop.jpg"
+        imageAlt="Safa Sanctuary team members standing together on a rooftop"
       />
       <BoardSection />
     </>
