@@ -196,34 +196,34 @@ const HOME_SERVICE_GALLERY: GalleryImage[] = [
 
 const SERVICES_GALLERY: GalleryImage[] = [
   {
-    src: "/images/events/soft-launch-workshop-table.jpg",
-    alt: "Workshop table from the Safa Sanctuary soft launch",
-    title: "Workshop Materials",
+    src: "/images/events/services-gallery-01.jpg",
+    alt: "Community members applauding during the Safa Sanctuary soft launch",
+    title: "Community Support",
   },
   {
-    src: "/images/events/soft-launch-craft-activity.jpg",
-    alt: "Hands-on activity station at the Safa Sanctuary soft launch",
-    title: "Hands-On Activities",
+    src: "/images/events/services-gallery-02.jpg",
+    alt: "Safa Sanctuary team members standing together on a rooftop",
+    title: "Team Support",
   },
   {
-    src: "/images/events/soft-launch-indoor-gathering.jpg",
-    alt: "Community members gathering indoors at the Safa Sanctuary soft launch",
-    title: "Supportive Gathering",
+    src: "/images/events/services-gallery-03.jpg",
+    alt: "Community members participating in a hands-on activity",
+    title: "Hands-On Activity",
   },
   {
-    src: "/images/events/soft-launch-makers-table.jpg",
-    alt: "Guests gathered around a makers table at the Safa Sanctuary soft launch",
-    title: "Collaborative Space",
+    src: "/images/events/services-gallery-04.jpg",
+    alt: "Child participating in an activity at the Safa Sanctuary soft launch",
+    title: "Family Welcome",
   },
   {
-    src: "/images/events/soft-launch-branding-table.jpg",
-    alt: "Branding and welcome table from the Safa Sanctuary soft launch",
-    title: "Welcome Table",
+    src: "/images/events/services-gallery-05.jpg",
+    alt: "Decorated candle and activity materials from the Safa Sanctuary soft launch",
+    title: "Creative Materials",
   },
   {
-    src: "/images/events/soft-launch-cupcakes.jpg",
-    alt: "Cupcakes from the Safa Sanctuary soft launch",
-    title: "Celebration Details",
+    src: "/images/events/services-gallery-06.jpg",
+    alt: "Guest holding a decorated candle at the Safa Sanctuary soft launch",
+    title: "Community Joy",
   },
 ];
 
