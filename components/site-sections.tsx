@@ -439,7 +439,11 @@ export function HomeExperience() {
     <>
       <HeroSection />
       <InstagramSpotlightSection />
-      <MissionSection mission={HOME_MISSION} />
+      <MissionSection
+        mission={HOME_MISSION}
+        imageSrc="/images/events/home-mission-community-table.jpg"
+        imageAlt="Community members gathered around a workshop table"
+      />
       <ServicesCards />
       <ImageGallerySection
         eyebrow="Community Moments"
