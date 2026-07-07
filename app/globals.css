@@ -19,8 +19,8 @@
   --color-text-muted: #6B6B6B;
   --color-moss: #6F815F;
   --color-fern: #D9E3D4;
-  --pattern-star: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='128' height='128' viewBox='0 0 128 128'%3E%3Cg fill='none'%3E%3Cpath d='M64 18 76 52 110 64 76 76 64 110 52 76 18 64 52 52Z' stroke='%234A6741' stroke-width='0.42' stroke-opacity='0.08'/%3E%3Cpath d='M64 36 92 64 64 92 36 64Z' stroke='%23C8922A' stroke-width='0.36' stroke-opacity='0.07'/%3E%3Ccircle cx='64' cy='64' r='13' stroke='%232E4228' stroke-width='0.32' stroke-opacity='0.055'/%3E%3C/g%3E%3C/svg%3E");
-  --pattern-star-bold: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='128' height='128' viewBox='0 0 128 128'%3E%3Cg fill='none'%3E%3Cpath d='M64 18 76 52 110 64 76 76 64 110 52 76 18 64 52 52Z' stroke='%234A6741' stroke-width='0.46' stroke-opacity='0.1'/%3E%3Cpath d='M64 36 92 64 64 92 36 64Z' stroke='%2395774E' stroke-width='0.38' stroke-opacity='0.075'/%3E%3Ccircle cx='64' cy='64' r='13' stroke='%232E4228' stroke-width='0.34' stroke-opacity='0.06'/%3E%3C/g%3E%3C/svg%3E");
+  --pattern-star: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='144' height='144' viewBox='0 0 144 144'%3E%3Cg fill='none'%3E%3Cpath d='M72 18C85 42 102 42 126 72C102 102 85 102 72 126C59 102 42 102 18 72C42 42 59 42 72 18Z' stroke='%234A6741' stroke-width='0.78' stroke-opacity='0.14'/%3E%3Cpath d='M72 34C83 51 93 61 110 72C93 83 83 93 72 110C61 93 51 83 34 72C51 61 61 51 72 34Z' stroke='%2395774E' stroke-width='0.62' stroke-opacity='0.12'/%3E%3Cpath d='M72 48C79 57 87 63 96 72C87 81 79 87 72 96C65 87 57 81 48 72C57 63 65 57 72 48Z' stroke='%232E4228' stroke-width='0.52' stroke-opacity='0.095'/%3E%3Ccircle cx='72' cy='72' r='16' stroke='%23C8922A' stroke-width='0.45' stroke-opacity='0.1'/%3E%3C/g%3E%3C/svg%3E");
+  --pattern-star-bold: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='144' height='144' viewBox='0 0 144 144'%3E%3Cg fill='none'%3E%3Cpath d='M72 18C85 42 102 42 126 72C102 102 85 102 72 126C59 102 42 102 18 72C42 42 59 42 72 18Z' stroke='%234A6741' stroke-width='0.86' stroke-opacity='0.18'/%3E%3Cpath d='M72 34C83 51 93 61 110 72C93 83 83 93 72 110C61 93 51 83 34 72C51 61 61 51 72 34Z' stroke='%2395774E' stroke-width='0.68' stroke-opacity='0.15'/%3E%3Cpath d='M72 48C79 57 87 63 96 72C87 81 79 87 72 96C65 87 57 81 48 72C57 63 65 57 72 48Z' stroke='%232E4228' stroke-width='0.58' stroke-opacity='0.12'/%3E%3Ccircle cx='72' cy='72' r='16' stroke='%23C8922A' stroke-width='0.5' stroke-opacity='0.13'/%3E%3C/g%3E%3C/svg%3E");
 
   --font-display: 'Fraunces', Georgia, serif;
   --font-body: 'DM Sans', system-ui, sans-serif;
@@ -118,7 +118,7 @@ section:nth-child(even) {
   background:
     var(--pattern-star-bold),
     linear-gradient(180deg, rgba(232, 237, 230, 0.86), rgba(249, 245, 236, 0.78));
-  background-size: 128px 128px, auto;
+  background-size: 144px 144px, auto;
   background-position: 18px 18px, 0 0;
 }
 
@@ -127,7 +127,7 @@ section:nth-child(odd) {
     var(--pattern-star-bold),
     radial-gradient(circle at 8% 10%, rgba(46, 66, 40, 0.08), transparent 24rem),
     var(--color-cream);
-  background-size: 128px 128px, auto, auto;
+  background-size: 144px 144px, auto, auto;
   background-position: 18px 18px, 0 0, 0 0;
 }
 
@@ -381,7 +381,7 @@ section:nth-child(odd) {
   inset: 0;
   opacity: 1;
   background-image: var(--pattern-star);
-  background-size: 128px 128px;
+  background-size: 144px 144px;
   pointer-events: none;
   z-index: 0;
   mask-image: linear-gradient(90deg, black, rgba(0, 0, 0, 0.72), transparent);
@@ -1156,7 +1156,7 @@ section:nth-child(odd) {
     radial-gradient(circle at 50% -10%, rgba(240, 217, 168, 0.34), transparent 24rem),
     radial-gradient(circle at 8% 90%, rgba(22, 39, 25, 0.22), transparent 24rem),
     linear-gradient(135deg, var(--color-sage-light), #d2dfcc);
-  background-size: 128px 128px, auto, auto, auto;
+  background-size: 144px 144px, auto, auto, auto;
   background-position: 18px 18px, 0 0, 0 0, 0 0;
   padding: 6rem 4rem;
   text-align: center;
