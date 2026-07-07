@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import { Analytics } from "@vercel/analytics/next";
 import GlobalEffects from "@/components/global-effects";
 import SiteFooter from "@/components/site-footer";
 import SiteHeader from "@/components/site-header";
@@ -36,6 +37,7 @@ export default function RootLayout({
           <SiteFooter />
         </div>
         <GlobalEffects />
+        <Analytics />
       </body>
     </html>
   );
