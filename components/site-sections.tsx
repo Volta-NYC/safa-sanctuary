@@ -120,22 +120,14 @@ type GalleryImage = {
 };
 
 function ImageGallerySection({
-  eyebrow,
-  title,
   images,
 }: {
-  eyebrow: string;
-  title: string;
   images: GalleryImage[];
 }) {
   return (
     <section className="home-gallery-section">
       <div className="container-rail">
-        <div className="section-pane space-y-8 p-8 sm:p-10">
-          <div className="space-y-3">
-            <p className="eyebrow reveal">{eyebrow}</p>
-            <h2 className="section-title reveal reveal-delay-1">{title}</h2>
-          </div>
+        <div className="section-pane p-8 sm:p-10">
           <div className="gallery-grid">
             {images.map((item, index) => (
               <article
@@ -149,9 +141,6 @@ function ImageGallerySection({
                   height={780}
                   className="gallery-card-image"
                 />
-                <p className="mt-3 text-sm font-semibold tracking-wide text-[--ink-soft]">
-                  {item.title}
-                </p>
               </article>
             ))}
           </div>
@@ -446,8 +435,6 @@ export function HomeExperience() {
       />
       <ServicesCards />
       <ImageGallerySection
-        eyebrow="Community Moments"
-        title="Images From Safa Sanctuary"
         images={HOME_SERVICE_GALLERY}
       />
       <SupportFormSection includeSmsConsent={false} />
@@ -474,8 +461,6 @@ export function ServicesExperience() {
     <>
       <ServicesCards headingTag="h1" />
       <ImageGallerySection
-        eyebrow="Services In Practice"
-        title="Community Images"
         images={SERVICES_GALLERY}
       />
       <SupportFormSection includeSmsConsent={true} />
