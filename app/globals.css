@@ -1654,59 +1654,132 @@ footer a:hover {
 }
 
 @media (max-width: 768px) {
+  h1 {
+    font-size: clamp(2.35rem, 12vw, 3.65rem);
+    line-height: 1.02;
+  }
+
+  h2 {
+    font-size: clamp(1.65rem, 8vw, 2.45rem);
+  }
+
   section {
-    padding: 4rem 1.5rem;
+    padding: 3.25rem 1rem;
   }
 
   .container-rail {
-    width: min(1160px, calc(100% - 1.25rem));
+    width: min(1160px, calc(100% - 1rem));
   }
 
   .site-nav {
-    padding: 0.75rem 1.25rem 0.55rem;
+    padding: 0.45rem 0.75rem 0.4rem;
+  }
+
+  .site-nav > .container-rail {
+    height: 78px;
+    gap: 0.75rem;
+  }
+
+  .site-nav a[href="/"] {
+    margin-left: -0.25rem;
+  }
+
+  .site-nav a[href="/"] > span:not(.sr-only) {
+    width: 62px;
+    height: 78px;
+  }
+
+  .menu-toggle {
+    width: 2.5rem;
+    height: 2.5rem;
+    flex: 0 0 auto;
   }
 
   .contact-alert-bar {
-    padding: 0.52rem 0;
+    padding: 0.4rem 0.75rem;
   }
 
   .contact-alert-text {
-    font-size: 0.82rem;
+    font-size: 0.74rem;
+    line-height: 1.32;
   }
 
   .hero {
     grid-template-columns: 1fr;
-    min-height: auto;
-    padding: 2.3rem 1.5rem 3.4rem;
-    text-align: center;
+    min-height: calc(100svh - 120px);
+    padding: 1.1rem 1rem 2.75rem;
+    text-align: left;
   }
 
   .hero-image-wrap {
-    order: -1;
-    margin-bottom: 2rem;
+    margin-top: 1.5rem;
+    max-width: 76vw;
+    justify-self: center;
   }
 
   .hero::after {
     display: none;
   }
 
-  .hero-eyebrow,
+  .hero-text {
+    padding: 1.55rem 1.2rem;
+    border-left: 0;
+    border-top: 1px solid rgba(22, 39, 25, 0.22);
+    background:
+      linear-gradient(180deg, rgba(249, 245, 236, 0.88), rgba(232, 237, 230, 0.48), rgba(249, 245, 236, 0)),
+      linear-gradient(180deg, rgba(22, 39, 25, 0.035), transparent);
+    box-shadow: 0 -14px 34px rgba(22, 39, 25, 0.06);
+  }
+
+  .hero-text::before,
+  .hero-text::after {
+    left: auto;
+    top: -7px;
+    bottom: auto;
+  }
+
+  .hero-text::before {
+    left: 0;
+  }
+
+  .hero-text::after {
+    right: 0;
+  }
+
+  .hero h1 {
+    margin-bottom: 1rem;
+  }
+
   .hero-actions {
+    align-items: stretch;
+    gap: 0.65rem;
+  }
+
+  .hero-actions .btn-primary,
+  .hero-actions .btn-secondary {
+    width: 100%;
     justify-content: center;
+    padding: 0.82rem 1.1rem;
   }
 
   .hero-desc {
-    margin-inline: auto;
+    font-size: 0.98rem;
+    line-height: 1.62;
+    margin-bottom: 1.5rem;
   }
 
   .hero-title--typed {
-    min-height: 3.3em;
+    min-height: 3.65em;
+    margin-bottom: 0.9rem;
   }
 
   .hero-title-dynamic--sentence {
     white-space: normal;
-    flex-wrap: wrap;
-    justify-content: center;
+  }
+
+  .hero-image-wrap img {
+    max-width: 100%;
+    aspect-ratio: 4 / 3;
   }
 
   .instagram-title-line {
@@ -1724,11 +1797,12 @@ footer a:hover {
   }
 
   .mission-image-col {
-    height: 50vw;
+    height: 62vw;
+    min-height: 15rem;
   }
 
   .mission-text-col {
-    padding: 3rem 1.5rem;
+    padding: 2.5rem 1.25rem;
   }
 
   .mission-image-col::after {
@@ -1752,11 +1826,32 @@ footer a:hover {
   }
 
   .instagram-section {
-    padding: 4rem 1.5rem;
+    padding: 3.25rem 1rem;
   }
 
   .instagram-preview-grid {
     gap: 0.7rem;
+  }
+
+  .instagram-tags {
+    margin-top: 1.1rem;
+    margin-bottom: 1.4rem;
+  }
+
+  .section-pane {
+    border-radius: 14px;
+  }
+
+  .section-pane.p-8,
+  .section-pane.p-7,
+  .section-pane.p-6,
+  .section-pane.sm\:p-8,
+  .section-pane.sm\:p-10 {
+    padding: 1.25rem;
+  }
+
+  .service-card {
+    padding: 1.35rem;
   }
 
   .service-card h3,
@@ -1764,15 +1859,37 @@ footer a:hover {
   .service-title-compact {
     white-space: normal;
     font-size: 1.12rem;
+    max-width: calc(100% - 3.25rem);
   }
 
   .service-copy-block {
     min-height: auto;
   }
 
+  .service-media {
+    margin-top: 1rem;
+  }
+
+  .gallery-grid {
+    gap: 0.9rem;
+  }
+
+  .image-placeholder-card {
+    padding: 0.55rem;
+  }
+
+  .gallery-card-image {
+    height: 12.5rem;
+  }
+
   .donate-methods,
   .donate-qr-card {
     grid-template-columns: 1fr;
+  }
+
+  .donate-method-card,
+  .donate-pane {
+    padding: 1.25rem;
   }
 
   .footer-grid {
