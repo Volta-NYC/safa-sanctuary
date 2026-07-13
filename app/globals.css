@@ -1668,11 +1668,11 @@ footer a:hover {
   }
 
   .container-rail {
-    width: min(1160px, calc(100% - 1rem));
+    width: min(1160px, calc(100% - 0.75rem));
   }
 
   .site-nav {
-    padding: 0.45rem 0.75rem 0.4rem;
+    padding: 0.45rem 0.35rem 0.4rem 0.65rem;
   }
 
   .site-nav > .container-rail {
@@ -1685,8 +1685,8 @@ footer a:hover {
   }
 
   .site-nav a[href="/"] > span:not(.sr-only) {
-    width: 62px;
-    height: 78px;
+    width: 72px;
+    height: 82px;
   }
 
   .menu-toggle {
