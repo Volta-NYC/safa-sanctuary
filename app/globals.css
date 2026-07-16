@@ -1691,9 +1691,39 @@ footer a:hover {
   }
 
   .menu-toggle {
-    width: 2.5rem;
+    width: 2rem;
     height: 2.5rem;
     flex: 0 0 auto;
+    justify-content: flex-end;
+    border-color: transparent;
+    background: transparent;
+    border-radius: 0;
+    padding: 0;
+  }
+
+  .menu-toggle > span {
+    width: 1.55rem;
+  }
+
+  .menu-toggle > span > span {
+    width: 1.55rem;
+  }
+
+  .mobile-panel {
+    margin-left: auto;
+    width: min(18rem, calc(100vw - 0.75rem));
+    border-left: 1px solid rgba(240, 217, 168, 0.2);
+    border-bottom-left-radius: 18px;
+  }
+
+  .mobile-panel nav {
+    width: 100%;
+    padding-inline: 0.75rem;
+  }
+
+  .mobile-panel a {
+    text-align: right;
+    justify-content: flex-end;
   }
 
   .contact-alert-bar {
