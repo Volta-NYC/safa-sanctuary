@@ -1693,10 +1693,7 @@ footer a:hover {
   }
 
   .menu-toggle {
-    position: absolute;
-    right: 0.75rem;
-    top: 50%;
-    transform: translateY(-50%);
+    right: 0.5rem;
     width: 2rem;
     height: 2.5rem;
     flex: 0 0 auto;
@@ -1708,11 +1705,11 @@ footer a:hover {
   }
 
   .menu-toggle > span {
-    width: 1.55rem;
+    width: 1.75rem;
   }
 
   .menu-toggle > span > span {
-    width: 1.55rem;
+    width: 1.75rem;
   }
 
   .mobile-panel {

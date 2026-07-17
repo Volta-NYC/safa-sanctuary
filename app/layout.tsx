@@ -1,4 +1,4 @@
-import type { Metadata } from "next";
+import type { Metadata, Viewport } from "next";
 import { Analytics } from "@vercel/analytics/next";
 import GlobalEffects from "@/components/global-effects";
 import SiteFooter from "@/components/site-footer";
@@ -12,6 +12,11 @@ export const metadata: Metadata = {
   },
   description:
     "Support, empowerment, and culturally responsive community navigation for women in Brooklyn and Queens.",
+};
+
+export const viewport: Viewport = {
+  width: "device-width",
+  initialScale: 1,
 };
 
 export default function RootLayout({

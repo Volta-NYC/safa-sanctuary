@@ -52,7 +52,7 @@ export default function SiteHeader() {
       </div>
 
       <div className={headerClassName}>
-        <div className="container-rail flex h-[116px] items-center justify-between gap-6">
+        <div className="container-rail relative flex h-[116px] items-center justify-between gap-6">
           <Link
             href="/"
             className="group -ml-1 inline-flex items-center transition-transform duration-300 hover:scale-[1.01] sm:-ml-2"
@@ -94,21 +94,21 @@ export default function SiteHeader() {
             aria-label="Toggle menu"
             aria-expanded={menuOpen}
             onClick={() => setMenuOpen((open) => !open)}
-            className="menu-toggle inline-flex h-11 w-11 items-center justify-center rounded-xl md:hidden"
+            className="menu-toggle absolute right-2 top-1/2 inline-flex h-11 w-8 -translate-y-1/2 items-center justify-end rounded-xl md:hidden"
           >
-            <span className="relative block h-4 w-5">
+            <span className="relative block h-4 w-7">
               <span
-                className={`absolute left-0 top-0 h-[2px] w-5 rounded-full bg-current transition-transform duration-300 ${
+                className={`absolute left-0 top-0 h-[2px] w-7 rounded-full bg-current transition-transform duration-300 ${
                   menuOpen ? "translate-y-[7px] rotate-45" : ""
                 }`}
               />
               <span
-                className={`absolute left-0 top-[7px] h-[2px] w-5 rounded-full bg-current transition-opacity duration-300 ${
+                className={`absolute left-0 top-[7px] h-[2px] w-7 rounded-full bg-current transition-opacity duration-300 ${
                   menuOpen ? "opacity-0" : "opacity-100"
                 }`}
               />
               <span
-                className={`absolute left-0 top-[14px] h-[2px] w-5 rounded-full bg-current transition-transform duration-300 ${
+                className={`absolute left-0 top-[14px] h-[2px] w-7 rounded-full bg-current transition-transform duration-300 ${
                   menuOpen ? "-translate-y-[7px] -rotate-45" : ""
                 }`}
               />
