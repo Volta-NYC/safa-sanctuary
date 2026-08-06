@@ -105,12 +105,12 @@ export default function SiteFooter() {
           <p>
             Made by{" "}
             <a
-              href="https://voltanyc.org"
+              href="https://www.novusnyc.org/"
               target="_blank"
               rel="noopener noreferrer"
               className="footer-link volta-link underline-offset-4 hover:underline"
             >
-              Volta
+              Novus
             </a>
             .
           </p>
