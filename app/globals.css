@@ -1441,6 +1441,15 @@ footer a:hover {
   display: block;
 }
 
+.footer-org-details {
+  display: grid;
+  gap: 0.25rem;
+  max-width: 18rem;
+  color: rgba(255, 255, 255, 0.88);
+  font-size: 0.82rem;
+  line-height: 1.55;
+}
+
 .footer-divider {
   border: none;
   border-top: 1px solid rgba(255, 255, 255, 0.08);

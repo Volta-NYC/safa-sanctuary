@@ -33,11 +33,16 @@ export const NAV_ITEMS: NavItem[] = [
 
 export const SITE_TITLE = "Safa Sanctuary";
 
-export const INSTAGRAM_URL =
-  "https://www.instagram.com/safasanctuary/?igsh=MWIwa2prdmU0NG1zYg%3D%3D#";
+export const INSTAGRAM_URL = "https://www.instagram.com/safasanctuary/";
 
 export const CONTACT_EMAIL = "info@safasanctuary.org";
 export const CONTACT_PHONE = "(347) 899-3109";
+export const NONPROFIT_DETAILS = [
+  "Safa Sanctuary Inc.",
+  "New York Registered Nonprofit Organization",
+  "NY Charities Organization ID: 51-63-51",
+  "367 Chestnut St, Brooklyn, NY 11208",
+];
 
 export const HERO_TITLE = "Falling Through The Crack";
 export const HERO_COPY =

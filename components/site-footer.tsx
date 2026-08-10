@@ -5,6 +5,7 @@ import {
   CONTACT_PHONE,
   INSTAGRAM_URL,
   NAV_ITEMS,
+  NONPROFIT_DETAILS,
   SITE_TITLE,
 } from "@/lib/site-content";
 
@@ -77,6 +78,11 @@ export default function SiteFooter() {
                 </a>
               </li>
             </ul>
+            <address className="footer-org-details not-italic">
+              {NONPROFIT_DETAILS.map((detail) => (
+                <span key={detail}>{detail}</span>
+              ))}
+            </address>
           </div>
 
           <div className="space-y-4 reveal reveal-delay-3">
