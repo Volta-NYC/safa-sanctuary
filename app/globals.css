@@ -1132,16 +1132,20 @@ section:nth-child(odd) {
   font-size: 0.88rem;
   line-height: 1.55;
   color: rgba(33, 56, 32, 0.74);
+  cursor: pointer;
   text-transform: none !important;
   letter-spacing: 0 !important;
 }
 
-.contact-form .radio-row input {
+.contact-form .radio-row input[type="radio"] {
+  appearance: auto;
+  -webkit-appearance: radio;
   width: 18px;
   height: 18px;
   flex: 0 0 18px;
-  margin: 0.18rem 0 0;
+  margin: 0.25rem 0 0;
   accent-color: var(--color-canopy);
+  cursor: pointer;
 }
 
 .radio-row-copy {
