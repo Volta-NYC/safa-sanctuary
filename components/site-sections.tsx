@@ -5,6 +5,7 @@ import {
   ABOUT_OVERVIEW,
   ABOUT_MISSION,
   BOARD_MEMBERS,
+  BOARD_COMPLIANCE_BLURB,
   CONTACT_EMAIL,
   CONTACT_PHONE,
   HERO_COPY,
@@ -280,6 +281,11 @@ function BoardSection() {
                   <p className="board-bio">{member.bio}</p>
                 </div>
               </article>
+            ))}
+          </div>
+          <div className="board-compliance-note">
+            {BOARD_COMPLIANCE_BLURB.map((line) => (
+              <p key={line}>{line}</p>
             ))}
           </div>
         </div>

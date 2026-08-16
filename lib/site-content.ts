@@ -39,9 +39,15 @@ export const CONTACT_EMAIL = "info@safasanctuary.org";
 export const CONTACT_PHONE = "(347) 899-3109";
 export const NONPROFIT_DETAILS = [
   "Safa Sanctuary Inc.",
-  "New York Registered Nonprofit Organization",
-  "NY Charities Organization ID: 51-63-51",
-  "367 Chestnut St, Brooklyn, NY 11208",
+  "501(c)(3) Nonprofit Organization",
+  "EIN / Federal Tax ID: 41-3072123",
+  "New York Charities Organization ID: 51-63-51",
+  "367 Chestnut St, Brooklyn, NY",
+];
+export const BOARD_COMPLIANCE_BLURB = [
+  "Safa Sanctuary Inc. is a 501(c)(3) nonprofit organization serving women through resource navigation, advocacy, supportive services, workshops, and community-based programming.",
+  "EIN: 41-3072123 | NY Charities Organization ID: 51-63-51",
+  "367 Chestnut St, Brooklyn, NY",
 ];
 
 export const HERO_TITLE = "Falling Through The Crack";

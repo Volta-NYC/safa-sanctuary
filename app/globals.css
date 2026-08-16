@@ -944,6 +944,20 @@ section:nth-child(odd) {
   color: rgba(33, 56, 32, 0.78);
 }
 
+.board-compliance-note {
+  display: grid;
+  gap: 0.35rem;
+  border-top: 1px solid rgba(22, 39, 25, 0.12);
+  padding-top: 1.25rem;
+  color: rgba(33, 56, 32, 0.72);
+  font-size: 0.92rem;
+  line-height: 1.65;
+}
+
+.board-compliance-note p {
+  margin: 0;
+}
+
 .contact-form {
   display: block;
 }
