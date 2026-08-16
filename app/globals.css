@@ -1454,7 +1454,7 @@ footer a:hover {
 }
 
 .footer-logo-image {
-  width: 118px;
+  width: 138px;
   height: auto;
   display: block;
 }
@@ -1715,8 +1715,8 @@ footer a:hover {
   }
 
   .site-nav a[href="/"] > span:not(.sr-only) {
-    width: 72px;
-    height: 82px;
+    width: 82px;
+    height: 92px;
   }
 
   .menu-toggle {
