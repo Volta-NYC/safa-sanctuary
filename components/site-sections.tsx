@@ -74,11 +74,6 @@ function InstagramSpotlightSection() {
             We share updates, stories, and community resources regularly. Follow
             us to stay informed and connected.
           </p>
-          <div className="instagram-tags">
-            <span className="instagram-tag">Stories</span>
-            <span className="instagram-tag">Resources</span>
-            <span className="instagram-tag">Events</span>
-          </div>
           <a
             href={INSTAGRAM_URL}
             target="_blank"
@@ -316,7 +311,6 @@ function ServicesCards({ headingTag = "h2" }: { headingTag?: "h1" | "h2" }) {
                   </h3>
                   <p className="service-copy">{service.description}</p>
                 </div>
-                <span className="card-arrow">Learn more -&gt;</span>
               </article>
             ))}
           </div>
