@@ -59,6 +59,16 @@ export default function SiteFooter() {
                   Privacy Policy
                 </Link>
               </li>
+              <li>
+                <Link href="/terms-and-conditions" className="footer-link">
+                  Terms & Conditions
+                </Link>
+              </li>
+              <li>
+                <Link href="/sms-terms" className="footer-link">
+                  SMS Terms
+                </Link>
+              </li>
             </ul>
           </div>
 

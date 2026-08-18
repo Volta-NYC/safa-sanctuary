@@ -221,3 +221,98 @@ export const PRIVACY_POLICY: PolicySection[] = [
     ],
   },
 ];
+
+export const TERMS_INTRO =
+  "These Terms & Conditions explain how visitors may use Safa Sanctuary's website and communication channels. By using this website or contacting Safa Sanctuary Inc., you agree to use our services and information responsibly.";
+
+export const TERMS_POLICY: PolicySection[] = [
+  {
+    heading: "1. Website Use",
+    paragraphs: [
+      "The information on this website is provided for general community support, nonprofit program information, and contact purposes.",
+      "Website content does not replace professional legal, medical, mental health, financial, or emergency services advice.",
+    ],
+  },
+  {
+    heading: "2. Services and Availability",
+    paragraphs: [
+      "Submitting a form, sending an email, placing a call, or sending a text message does not guarantee eligibility for services or immediate response.",
+      "Safa Sanctuary responds to inquiries as staff capacity allows and may refer individuals to partner organizations or emergency services when appropriate.",
+    ],
+  },
+  {
+    heading: "3. Communications",
+    paragraphs: [
+      "You may contact Safa Sanctuary by phone, email, online form, or other communication channels listed on this website.",
+      "If you provide contact information, Safa Sanctuary may use it to respond to your inquiry, follow up about services, or provide relevant program information.",
+    ],
+  },
+  {
+    heading: "4. Emergencies",
+    paragraphs: [
+      "Safa Sanctuary does not provide emergency response services. If this is an emergency, please call 911 immediately.",
+    ],
+  },
+  {
+    heading: "5. Privacy",
+    paragraphs: [
+      "Please review our Privacy Policy for details about how Safa Sanctuary collects, uses, protects, and shares information.",
+    ],
+  },
+  {
+    heading: "6. Contact",
+    paragraphs: [
+      "Questions about these Terms & Conditions may be directed to Safa Sanctuary Inc. at info@safasanctuary.org or (347) 899-3109.",
+    ],
+  },
+];
+
+export const SMS_TERMS_INTRO =
+  "These SMS Terms of Service explain how Safa Sanctuary Inc. uses conversational and informational text messaging when you choose to communicate with us by SMS.";
+
+export const SMS_TERMS_POLICY: PolicySection[] = [
+  {
+    heading: "1. SMS Consent",
+    paragraphs: [
+      "By providing your mobile phone number and opting in, you consent to receive conversational and informational SMS/text messages from Safa Sanctuary Inc.",
+      "Consent may be provided by submitting a web form, requesting services, or initiating a text conversation with us.",
+      "SMS consent is optional and is not required to access non-SMS communication options.",
+    ],
+  },
+  {
+    heading: "2. Message Purpose",
+    paragraphs: [
+      "Messages may include responses to your inquiries, service-related updates, appointment reminders, and follow-up communication related to support, navigation, or referrals.",
+      "Safa Sanctuary does not send recurring marketing campaigns by SMS.",
+    ],
+  },
+  {
+    heading: "3. Opt-Out and Support",
+    bullets: [
+      "Reply STOP to opt out of SMS communications at any time.",
+      "Reply HELP for support or additional information.",
+      "Message and data rates may apply.",
+      "Messaging frequency varies and messages are sent only as needed in response to your inquiry or services.",
+    ],
+  },
+  {
+    heading: "4. Privacy and Data Sharing",
+    paragraphs: [
+      "No mobile opt-in or text message consent will be shared with third parties or affiliates.",
+      "SMS consent is used solely for direct communication between you and Safa Sanctuary and is not sold, rented, or disclosed for marketing or promotional purposes.",
+    ],
+  },
+  {
+    heading: "5. Emergency Notice",
+    paragraphs: [
+      "SMS messaging is not monitored 24/7 and should not be used for emergencies. If this is an emergency, please call 911.",
+      "While we take reasonable steps to protect your information, SMS/text messaging is not a fully secure communication method.",
+    ],
+  },
+  {
+    heading: "6. Contact",
+    paragraphs: [
+      "Questions about SMS messaging may be directed to Safa Sanctuary Inc. at info@safasanctuary.org or (347) 899-3109.",
+    ],
+  },
+];

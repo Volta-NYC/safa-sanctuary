@@ -14,9 +14,14 @@ import {
   INSTAGRAM_URL,
   PRIVACY_INTRO,
   PRIVACY_POLICY,
+  SMS_TERMS_INTRO,
+  SMS_TERMS_POLICY,
   SERVICES,
   SUPPORT_COPY,
   SUPPORT_TITLE,
+  TERMS_INTRO,
+  TERMS_POLICY,
+  type PolicySection as PolicySectionContent,
 } from "@/lib/site-content";
 
 function HeroSection() {
@@ -345,15 +350,23 @@ function SupportFormSection({ includeSmsConsent }: { includeSmsConsent: boolean 
   );
 }
 
-function PolicySection() {
+function LegalPageSection({
+  title,
+  intro,
+  sections,
+}: {
+  title: string;
+  intro: string;
+  sections: PolicySectionContent[];
+}) {
   return (
     <section className="policy-section">
       <div className="container-rail">
         <div className="section-pane space-y-8 p-7 sm:p-10">
-          <h1 className="section-title">Privacy Policy</h1>
-          <p className="text-base leading-8 text-[--ink-soft]">{PRIVACY_INTRO}</p>
+          <h1 className="section-title">{title}</h1>
+          <p className="text-base leading-8 text-[--ink-soft]">{intro}</p>
           <div className="space-y-8">
-            {PRIVACY_POLICY.map((section) => (
+            {sections.map((section) => (
               <div key={section.heading} className="space-y-3">
                 <h2 className="text-xl font-semibold text-[--ink-strong]">
                   {section.heading}
@@ -469,7 +482,33 @@ export function ServicesExperience() {
 }
 
 export function PrivacyExperience() {
-  return <PolicySection />;
+  return (
+    <LegalPageSection
+      title="Privacy Policy"
+      intro={PRIVACY_INTRO}
+      sections={PRIVACY_POLICY}
+    />
+  );
+}
+
+export function TermsExperience() {
+  return (
+    <LegalPageSection
+      title="Terms & Conditions"
+      intro={TERMS_INTRO}
+      sections={TERMS_POLICY}
+    />
+  );
+}
+
+export function SmsTermsExperience() {
+  return (
+    <LegalPageSection
+      title="SMS Terms of Service"
+      intro={SMS_TERMS_INTRO}
+      sections={SMS_TERMS_POLICY}
+    />
+  );
 }
 
 export function GetInTouchExperience() {
