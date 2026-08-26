@@ -133,7 +133,7 @@ function ImageGallerySection({
             {images.map((item, index) => (
               <article
                 key={item.src}
-                className={`image-placeholder-card card-lift reveal reveal-delay-${Math.min(index + 1, 4)}`}
+                className={`image-placeholder-card reveal reveal-delay-${Math.min(index + 1, 4)}`}
               >
                 <Image
                   src={item.src}
