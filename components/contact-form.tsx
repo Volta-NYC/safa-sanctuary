@@ -51,7 +51,7 @@ export default function ContactForm({
   if (status === "success") {
     return (
       <section
-        className="contact-form contact-section contact-confirmation reveal"
+        className="contact-form contact-section contact-confirmation"
         role="status"
         aria-live="polite"
       >
